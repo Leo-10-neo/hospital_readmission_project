@@ -409,14 +409,29 @@ if "local_records" not in st.session_state:
     st.session_state.local_records = []
 
 def init_firebase():
-    key_path = os.path.join(BASE_DIR, "serviceAccountKey.json")
-    if os.path.exists(key_path) and not firebase_admin._apps:
+    # 1. Try to load from Streamlit Secrets (Cloud deployment)
+    if "firebase" in st.secrets:
         try:
-            cred = credentials.Certificate(key_path)
-            firebase_admin.initialize_app(cred)
+            if not firebase_admin._apps:
+                secrets_dict = dict(st.secrets["firebase"])
+                cred = credentials.Certificate(secrets_dict)
+                firebase_admin.initialize_app(cred)
             return firestore.client()
         except Exception as e:
-            st.sidebar.error(f"Firebase Error: {e}")
+            st.sidebar.error(f"Firebase Secrets Error: {e}")
+            return None
+
+    # 2. Fallback to local file (Local deployment)
+    key_path = os.path.join(BASE_DIR, "serviceAccountKey.json")
+    if os.path.exists(key_path):
+        try:
+            if not firebase_admin._apps:
+                cred = credentials.Certificate(key_path)
+                firebase_admin.initialize_app(cred)
+            return firestore.client()
+        except Exception as e:
+            st.sidebar.error(f"Firebase Local Error: {e}")
+            
     return None
 
 db = init_firebase()
