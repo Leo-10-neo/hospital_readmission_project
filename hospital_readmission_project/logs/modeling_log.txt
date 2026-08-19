@@ -1,0 +1,127 @@
+[2026-05-08 11:42:23]  [INFO   ]  =================================================================
+[2026-05-08 11:42:23]  [INFO   ]  Model training started: 2026-05-08 11:42:23
+[2026-05-08 11:42:45]  [INFO   ]  =================================================================
+[2026-05-08 11:42:45]  [INFO   ]  Model training started: 2026-05-08 11:42:45
+[2026-05-08 11:42:45]  [INFO   ]  
+======================================================================
+  SECTION 1 – LOAD
+======================================================================
+[2026-05-08 11:42:46]  [INFO   ]  Loaded featured_data: (101766, 96)
+[2026-05-08 11:42:46]  [INFO   ]  Dropped 6 columns: ['diag_1', 'diag_2', 'diag_3', 'weight', 'payer_code', 'medical_specialty']
+[2026-05-08 11:42:46]  [INFO   ]  
+======================================================================
+  SECTION 2 – ENCODING
+======================================================================
+[2026-05-08 11:42:46]  [INFO   ]  Target distribution: {0: 0.888, 1: 0.112}
+[2026-05-08 11:42:46]  [INFO   ]  Encoding map saved → D:\hospital_readmission_project\hospital_readmission_project\reports\encoding_mappings.json
+[2026-05-08 11:42:46]  [INFO   ]  
+======================================================================
+  SECTION 3 – SPLIT
+======================================================================
+[2026-05-08 11:42:46]  [INFO   ]  Train: (71236, 89)  pos_rate=0.112
+[2026-05-08 11:42:46]  [INFO   ]  Val: (15265, 89)  pos_rate=0.112
+[2026-05-08 11:42:46]  [INFO   ]  Test: (15265, 89)  pos_rate=0.112
+[2026-05-08 11:43:29]  [INFO   ]  =================================================================
+[2026-05-08 11:43:29]  [INFO   ]  Model training started: 2026-05-08 11:43:29
+[2026-05-08 11:43:29]  [INFO   ]  
+======================================================================
+  SECTION 1 – LOAD
+======================================================================
+[2026-05-08 11:43:30]  [INFO   ]  Loaded featured_data: (101766, 96)
+[2026-05-08 11:43:30]  [INFO   ]  Dropped 6 columns: ['diag_1', 'diag_2', 'diag_3', 'weight', 'payer_code', 'medical_specialty']
+[2026-05-08 11:43:30]  [INFO   ]  
+======================================================================
+  SECTION 2 – ENCODING
+======================================================================
+[2026-05-08 11:43:30]  [INFO   ]  Target distribution: {0: 0.888, 1: 0.112}
+[2026-05-08 11:43:30]  [INFO   ]  Encoding map saved → D:\hospital_readmission_project\hospital_readmission_project\reports\encoding_mappings.json
+[2026-05-08 11:43:30]  [INFO   ]  
+======================================================================
+  SECTION 3 – SPLIT
+======================================================================
+[2026-05-08 11:43:30]  [INFO   ]  Train: (71236, 89)  pos_rate=0.112
+[2026-05-08 11:43:30]  [INFO   ]  Val: (15265, 89)  pos_rate=0.112
+[2026-05-08 11:43:30]  [INFO   ]  Test: (15265, 89)  pos_rate=0.112
+[2026-05-08 11:43:32]  [INFO   ]  
+======================================================================
+  SECTION 5 – TRAINING
+======================================================================
+[2026-05-08 11:43:32]  [INFO   ]  Training Logistic Regression
+[2026-05-08 11:43:33]  [INFO   ]  Logistic Regression: acc=0.8881 auc=0.6639 f1_w=0.8366 f1_pos=0.0081 ap=0.2027
+[2026-05-08 11:43:33]  [INFO   ]  Training Random Forest
+[2026-05-08 11:43:35]  [INFO   ]  Random Forest: acc=0.6815 auc=0.6731 f1_w=0.7378 f1_pos=0.2761 ap=0.2104
+[2026-05-08 11:43:35]  [INFO   ]  Training Gradient Boosting
+[2026-05-08 11:44:32]  [INFO   ]  Gradient Boosting: acc=0.8883 auc=0.6806 f1_w=0.8384 f1_pos=0.0240 ap=0.2264
+[2026-05-08 11:44:32]  [INFO   ]  
+======================================================================
+  SECTION 6 – TEST EVALUATION
+======================================================================
+[2026-05-08 11:44:32]  [INFO   ]  BEST [Gradient Boosting] test: acc=0.8884 auc=0.6658
+[2026-05-08 11:44:32]  [INFO   ]  
+======================================================================
+  SECTION 7 – SAVE MODELS
+======================================================================
+[2026-05-08 11:44:33]  [INFO   ]  Saved Logistic Regression → D:\hospital_readmission_project\hospital_readmission_project\models\logistic_regression.pkl
+[2026-05-08 11:44:33]  [INFO   ]  Saved Random Forest → D:\hospital_readmission_project\hospital_readmission_project\models\random_forest.pkl
+[2026-05-08 11:44:33]  [INFO   ]  Saved Gradient Boosting → D:\hospital_readmission_project\hospital_readmission_project\models\gradient_boosting.pkl
+[2026-05-08 11:44:33]  [INFO   ]  Results:
+                 model  accuracy  auc_roc  f1_weighted  f1_positive  avg_precision
+2    Gradient Boosting    0.8883   0.6806       0.8384       0.0240         0.2264
+1        Random Forest    0.6815   0.6731       0.7378       0.2761         0.2104
+0  Logistic Regression    0.8881   0.6639       0.8366       0.0081         0.2027
+[2026-05-08 11:44:33]  [INFO   ]  
+======================================================================
+  SECTION 9 – PLOTS
+======================================================================
+[2026-05-08 11:44:34]  [INFO   ]  Model training complete. Best: Gradient Boosting
+[2026-05-08 11:55:57]  [INFO   ]  Model training (Step 5) started: 2026-05-08 11:55:57
+[2026-05-08 11:55:57]  [INFO   ]  
+======================================================================
+  SECTION A – LOAD TRAINING DATA
+======================================================================
+[2026-05-08 11:55:57]  [INFO   ]  Loaded: X_train(71236, 89) X_val(15265, 89) X_test(15265, 89)
+[2026-05-08 11:55:57]  [INFO   ]  NaN issues present: False
+[2026-05-08 11:55:57]  [INFO   ]  
+======================================================================
+  SECTION B – SMOTE
+======================================================================
+[2026-05-08 11:55:57]  [INFO   ]  Before SMOTE: {0: 63286, 1: 7950}
+[2026-05-08 11:56:01]  [INFO   ]  After SMOTE: {0: 63286, 1: 63286}
+[2026-05-08 11:56:01]  [INFO   ]  Synthetic samples created: 55,336
+[2026-05-08 11:56:01]  [INFO   ]  Balanced data saved -> D:\hospital_readmission_project\hospital_readmission_project\data\processed\X_train_balanced.pkl
+[2026-05-08 11:56:01]  [INFO   ]  SMOTE plot saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\smote_class_balance.png
+[2026-05-08 11:56:01]  [INFO   ]  Sections A & B complete: 2026-05-08 11:56:01
+[2026-05-08 12:52:36]  [INFO   ]  Model training (Step 5) started: 2026-05-08 12:52:36
+[2026-05-08 12:52:36]  [INFO   ]  
+======================================================================
+  SECTION A – LOAD TRAINING DATA
+======================================================================
+[2026-05-08 12:52:36]  [INFO   ]  Loaded: X_train(71236, 89) X_val(15265, 89) X_test(15265, 89)
+[2026-05-08 12:52:36]  [INFO   ]  NaN issues present: False
+[2026-05-08 12:52:36]  [INFO   ]  
+======================================================================
+  SECTION B – SMOTE
+======================================================================
+[2026-05-08 12:52:36]  [INFO   ]  Before SMOTE: {0: 63286, 1: 7950}
+[2026-05-08 12:52:40]  [INFO   ]  After SMOTE: {0: 63286, 1: 63286}
+[2026-05-08 12:52:40]  [INFO   ]  Synthetic samples created: 55,336
+[2026-05-08 12:52:40]  [INFO   ]  Balanced data saved -> D:\hospital_readmission_project\hospital_readmission_project\data\processed\X_train_balanced.pkl
+[2026-05-08 12:52:40]  [INFO   ]  SMOTE plot saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\smote_class_balance.png
+[2026-05-08 12:52:40]  [INFO   ]  Sections A & B complete: 2026-05-08 12:52:40
+[2026-08-15 19:53:27]  [INFO   ]  Model training (Step 5) started: 2026-08-15 19:53:27
+[2026-08-15 19:53:27]  [INFO   ]  
+======================================================================
+  SECTION A – LOAD TRAINING DATA
+======================================================================
+[2026-08-15 19:53:27]  [INFO   ]  Loaded: X_train(71236, 89) X_val(15265, 89) X_test(15265, 89)
+[2026-08-15 19:53:27]  [INFO   ]  NaN issues present: False
+[2026-08-15 19:53:27]  [INFO   ]  
+======================================================================
+  SECTION B – SMOTE
+======================================================================
+[2026-08-15 19:53:27]  [INFO   ]  Before SMOTE: {0: 63286, 1: 7950}
+[2026-08-15 19:53:30]  [INFO   ]  After SMOTE: {0: 63286, 1: 63286}
+[2026-08-15 19:53:30]  [INFO   ]  Synthetic samples created: 55,336
+[2026-08-15 19:53:30]  [INFO   ]  Balanced data saved -> D:\hospital_readmission_project\hospital_readmission_project\data\processed\X_train_balanced.pkl
+[2026-08-15 19:53:30]  [INFO   ]  SMOTE plot saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\smote_class_balance.png
+[2026-08-15 19:53:30]  [INFO   ]  Sections A & B complete: 2026-08-15 19:53:30

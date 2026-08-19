@@ -1,0 +1,1120 @@
+[2026-05-08 11:15:58]  [INFO   ]  =================================================================
+[2026-05-08 11:15:58]  [INFO   ]  Pipeline started: 2026-05-08 11:15:58
+[2026-05-08 11:15:58]  [INFO   ]  
+======================================================================
+  PART A — DATA LOADING
+======================================================================
+[2026-05-08 11:15:58]  [INFO   ]  Dataset shape  : 101766 rows × 48 columns
+[2026-05-08 11:15:58]  [INFO   ]  Memory usage   : 224.27 MB
+[2026-05-08 11:15:58]  [INFO   ]  Data types:
+[2026-05-08 11:15:58]  [INFO   ]    race                                     str
+[2026-05-08 11:15:58]  [INFO   ]    gender                                   str
+[2026-05-08 11:15:58]  [INFO   ]    age                                      str
+[2026-05-08 11:15:58]  [INFO   ]    weight                                   str
+[2026-05-08 11:15:58]  [INFO   ]    admission_type_id                        int64
+[2026-05-08 11:15:58]  [INFO   ]    discharge_disposition_id                 int64
+[2026-05-08 11:15:58]  [INFO   ]    admission_source_id                      int64
+[2026-05-08 11:15:58]  [INFO   ]    time_in_hospital                         int64
+[2026-05-08 11:15:58]  [INFO   ]    payer_code                               str
+[2026-05-08 11:15:58]  [INFO   ]    medical_specialty                        str
+[2026-05-08 11:15:58]  [INFO   ]    num_lab_procedures                       int64
+[2026-05-08 11:15:58]  [INFO   ]    num_procedures                           int64
+[2026-05-08 11:15:58]  [INFO   ]    num_medications                          int64
+[2026-05-08 11:15:58]  [INFO   ]    number_outpatient                        int64
+[2026-05-08 11:15:58]  [INFO   ]    number_emergency                         int64
+[2026-05-08 11:15:58]  [INFO   ]    number_inpatient                         int64
+[2026-05-08 11:15:58]  [INFO   ]    diag_1                                   str
+[2026-05-08 11:15:58]  [INFO   ]    diag_2                                   str
+[2026-05-08 11:15:58]  [INFO   ]    diag_3                                   str
+[2026-05-08 11:15:58]  [INFO   ]    number_diagnoses                         int64
+[2026-05-08 11:15:58]  [INFO   ]    max_glu_serum                            str
+[2026-05-08 11:15:58]  [INFO   ]    A1Cresult                                str
+[2026-05-08 11:15:58]  [INFO   ]    metformin                                str
+[2026-05-08 11:15:58]  [INFO   ]    repaglinide                              str
+[2026-05-08 11:15:58]  [INFO   ]    nateglinide                              str
+[2026-05-08 11:15:58]  [INFO   ]    chlorpropamide                           str
+[2026-05-08 11:15:58]  [INFO   ]    glimepiride                              str
+[2026-05-08 11:15:58]  [INFO   ]    acetohexamide                            str
+[2026-05-08 11:15:58]  [INFO   ]    glipizide                                str
+[2026-05-08 11:15:58]  [INFO   ]    glyburide                                str
+[2026-05-08 11:15:58]  [INFO   ]    tolbutamide                              str
+[2026-05-08 11:15:58]  [INFO   ]    pioglitazone                             str
+[2026-05-08 11:15:58]  [INFO   ]    rosiglitazone                            str
+[2026-05-08 11:15:58]  [INFO   ]    acarbose                                 str
+[2026-05-08 11:15:58]  [INFO   ]    miglitol                                 str
+[2026-05-08 11:15:58]  [INFO   ]    troglitazone                             str
+[2026-05-08 11:15:58]  [INFO   ]    tolazamide                               str
+[2026-05-08 11:15:58]  [INFO   ]    examide                                  str
+[2026-05-08 11:15:58]  [INFO   ]    citoglipton                              str
+[2026-05-08 11:15:58]  [INFO   ]    insulin                                  str
+[2026-05-08 11:15:58]  [INFO   ]    glyburide-metformin                      str
+[2026-05-08 11:15:58]  [INFO   ]    glipizide-metformin                      str
+[2026-05-08 11:15:58]  [INFO   ]    glimepiride-pioglitazone                 str
+[2026-05-08 11:15:58]  [INFO   ]    metformin-rosiglitazone                  str
+[2026-05-08 11:15:58]  [INFO   ]    metformin-pioglitazone                   str
+[2026-05-08 11:15:58]  [INFO   ]    change                                   str
+[2026-05-08 11:15:58]  [INFO   ]    diabetesMed                              str
+[2026-05-08 11:15:58]  [INFO   ]    readmitted                               str
+[2026-05-08 11:15:58]  [INFO   ]  First 10 rows logged.
+[2026-05-08 11:15:58]  [INFO   ]                race  gender       age weight  admission_type_id  discharge_disposition_id  admission_source_id  time_in_hospital payer_code         medical_specialty  num_lab_procedures  num_procedures  num_medications  number_outpatient  number_emergency  number_inpatient  diag_1  diag_2 diag_3  number_diagnoses max_glu_serum A1Cresult metformin repaglinide nateglinide chlorpropamide glimepiride acetohexamide glipizide glyburide tolbutamide pioglitazone rosiglitazone acarbose miglitol troglitazone tolazamide examide citoglipton insulin glyburide-metformin glipizide-metformin glimepiride-pioglitazone metformin-rosiglitazone metformin-pioglitazone change diabetesMed readmitted
+0        Caucasian  Female    [0-10)    NaN                  6                        25                    1                 1        NaN  Pediatrics-Endocrinology                  41               0                1                  0                 0                 0  250.83     NaN    NaN                 1           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No          No         NO
+1        Caucasian  Female   [10-20)    NaN                  1                         1                    7                 3        NaN                       NaN                  59               0               18                  0                 0                 0     276  250.01    255                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes        >30
+2  AfricanAmerican  Female   [20-30)    NaN                  1                         1                    7                 2        NaN                       NaN                  11               5               13                  2                 0                 1     648     250    V27                 6           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes         NO
+3        Caucasian    Male   [30-40)    NaN                  1                         1                    7                 2        NaN                       NaN                  44               1               16                  0                 0                 0       8  250.43    403                 7           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes         NO
+4        Caucasian    Male   [40-50)    NaN                  1                         1                    7                 1        NaN                       NaN                  51               0                8                  0                 0                 0     197     157    250                 5           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+5        Caucasian    Male   [50-60)    NaN                  2                         1                    2                 3        NaN                       NaN                  31               6               16                  0                 0                 0     414     411    250                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     No         Yes        >30
+6        Caucasian    Male   [60-70)    NaN                  3                         1                    2                 4        NaN                       NaN                  70               1               21                  0                 0                 0     414     411    V45                 7           NaN       NaN    Steady          No          No             No      Steady            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+7        Caucasian    Male   [70-80)    NaN                  1                         1                    7                 5        NaN                       NaN                  73               0               12                  0                 0                 0     428     492    250                 8           NaN       NaN        No          No          No             No          No            No        No    Steady          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes        >30
+8        Caucasian  Female   [80-90)    NaN                  2                         1                    4                13        NaN                       NaN                  68               2               28                  0                 0                 0     398     427     38                 8           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+9        Caucasian  Female  [90-100)    NaN                  3                         3                    4                12        NaN          InternalMedicine                  33               3               18                  0                 0                 0     434     198    486                 8           NaN       NaN        No          No          No             No          No            No        No        No          No           No        Steady       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+[2026-05-08 11:15:59]  [INFO   ]  
+======================================================================
+  PART B — INITIAL DATA QUALITY CHECK
+======================================================================
+[2026-05-08 11:15:59]  [INFO   ]                            missing_count  missing_pct
+weight                            98569        96.86
+max_glu_serum                     96420        94.75
+A1Cresult                         84748        83.28
+medical_specialty                 49949        49.08
+payer_code                        40256        39.56
+race                               2273         2.23
+diag_3                             1423         1.40
+diag_2                              358         0.35
+diag_1                               21         0.02
+time_in_hospital                      0         0.00
+num_lab_procedures                    0         0.00
+admission_source_id                   0         0.00
+admission_type_id                     0         0.00
+discharge_disposition_id              0         0.00
+gender                                0         0.00
+age                                   0         0.00
+number_inpatient                      0         0.00
+number_emergency                      0         0.00
+number_outpatient                     0         0.00
+num_medications                       0         0.00
+num_procedures                        0         0.00
+number_diagnoses                      0         0.00
+metformin                             0         0.00
+repaglinide                           0         0.00
+nateglinide                           0         0.00
+chlorpropamide                        0         0.00
+glimepiride                           0         0.00
+acetohexamide                         0         0.00
+glipizide                             0         0.00
+glyburide                             0         0.00
+tolbutamide                           0         0.00
+pioglitazone                          0         0.00
+rosiglitazone                         0         0.00
+acarbose                              0         0.00
+miglitol                              0         0.00
+troglitazone                          0         0.00
+tolazamide                            0         0.00
+examide                               0         0.00
+citoglipton                           0         0.00
+insulin                               0         0.00
+glyburide-metformin                   0         0.00
+glipizide-metformin                   0         0.00
+glimepiride-pioglitazone              0         0.00
+metformin-rosiglitazone               0         0.00
+metformin-pioglitazone                0         0.00
+change                                0         0.00
+diabetesMed                           0         0.00
+readmitted                            0         0.00
+[2026-05-08 11:15:59]  [INFO   ]  Duplicate rows: 0
+[2026-05-08 11:15:59]  [INFO   ]  Basic stats saved → D:\hospital_readmission_project\hospital_readmission_project\reports\data_quality_initial.csv
+[2026-05-08 11:16:00]  [INFO   ]  
+======================================================================
+  PART C — MISSING VALUE TREATMENT
+======================================================================
+[2026-05-08 11:16:00]  [INFO   ]    race: mode → Caucasian
+[2026-05-08 11:16:00]  [INFO   ]    weight: mode → [75-100)
+[2026-05-08 11:16:00]  [INFO   ]    payer_code: mode → MC
+[2026-05-08 11:16:00]  [INFO   ]    medical_specialty: mode → InternalMedicine
+[2026-05-08 11:16:00]  [INFO   ]    diag_1: mode → 428
+[2026-05-08 11:16:00]  [INFO   ]    diag_2: mode → 276
+[2026-05-08 11:16:00]  [INFO   ]    diag_3: mode → 250
+[2026-05-08 11:16:00]  [INFO   ]    max_glu_serum: mode → Norm
+[2026-05-08 11:16:00]  [INFO   ]    A1Cresult: mode → >8
+[2026-05-08 11:16:01]  [INFO   ]  
+======================================================================
+  PART D — DATA TYPE CORRECTIONS
+======================================================================
+[2026-05-08 11:16:01]  [INFO   ]    Converted — race: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — gender: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — age: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — admission_type_id: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — discharge_disposition_id: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — admission_source_id: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — payer_code: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — medical_specialty: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — diag_1: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — diag_2: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — diag_3: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — max_glu_serum: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — A1Cresult: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — metformin: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — repaglinide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — nateglinide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — chlorpropamide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — glimepiride: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — acetohexamide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — glipizide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — glyburide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — tolbutamide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — pioglitazone: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — rosiglitazone: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — acarbose: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — miglitol: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — troglitazone: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — tolazamide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — examide: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — citoglipton: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — insulin: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — glyburide-metformin: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — glipizide-metformin: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — glimepiride-pioglitazone: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — metformin-rosiglitazone: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — metformin-pioglitazone: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — change: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]    Converted — diabetesMed: numeric → object (categorical)
+[2026-05-08 11:16:01]  [INFO   ]  
+======================================================================
+  PART E — DUPLICATE REMOVAL
+======================================================================
+[2026-05-08 11:16:01]  [INFO   ]  Duplicate rows found: 0
+[2026-05-08 11:16:02]  [INFO   ]  
+======================================================================
+  PART F — OUTLIER DETECTION
+======================================================================
+[2026-05-08 11:16:02]  [INFO   ]    time_in_hospital: 2252 outliers → capped [1.000, 14.000]
+[2026-05-08 11:16:02]  [INFO   ]    num_lab_procedures: 143 outliers → capped [1.000, 85.000]
+[2026-05-08 11:16:02]  [INFO   ]    num_procedures: 4954 outliers → capped [0.000, 6.000]
+[2026-05-08 11:16:02]  [INFO   ]    num_medications: 2557 outliers → capped [3.000, 43.000]
+[2026-05-08 11:16:02]  [INFO   ]    number_outpatient: 16739 outliers → capped [0.000, 5.000]
+[2026-05-08 11:16:02]  [INFO   ]    number_emergency: 11383 outliers → capped [0.000, 3.000]
+[2026-05-08 11:16:02]  [INFO   ]    number_inpatient: 7049 outliers → capped [0.000, 6.000]
+[2026-05-08 11:16:02]  [INFO   ]    number_diagnoses: 281 outliers → capped [2.000, 9.000]
+[2026-05-08 11:16:03]  [INFO   ]  
+======================================================================
+  PART G — CATEGORICAL ENCODING
+======================================================================
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  acetohexamide: {'No': 0, 'Steady': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  tolbutamide: {'No': 0, 'Steady': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  troglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  examide: {'No': 0}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  citoglipton: {'No': 0}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  glipizide-metformin: {'No': 0, 'Steady': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  glimepiride-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  metformin-rosiglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  metformin-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  change: {'Ch': 0, 'No': 1}
+[2026-05-08 11:16:04]  [INFO   ]    LabelEncoded  diabetesMed: {'No': 0, 'Yes': 1}
+[2026-05-08 11:16:05]  [INFO   ]    One-Hot Encoded: ['race', 'gender', 'age', 'weight', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'payer_code', 'medical_specialty', 'diag_1', 'diag_2', 'diag_3', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'glipizide', 'glyburide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'tolazamide', 'insulin', 'glyburide-metformin']
+[2026-05-08 11:16:39]  [INFO   ]  
+======================================================================
+  PART H — PREPROCESSING REPORT
+======================================================================
+[2026-05-08 11:16:40]  [INFO   ]  Preprocessing summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\preprocessing_summary.txt
+[2026-05-08 11:16:40]  [INFO   ]  
+======================================================================
+  PART I — VISUALIZATIONS
+======================================================================
+[2026-05-08 11:16:40]  [INFO   ]  No missing values — skipping heatmap.
+[2026-05-08 11:16:42]  [INFO   ]  Saved 4 visualizations to D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda
+[2026-05-08 11:16:42]  [INFO   ]  Pipeline complete: 2026-05-08 11:16:42
+[2026-05-08 12:50:49]  [INFO   ]  =================================================================
+[2026-05-08 12:50:49]  [INFO   ]  Pipeline started: 2026-05-08 12:50:49
+[2026-05-08 12:50:49]  [INFO   ]  
+======================================================================
+  PART A — DATA LOADING
+======================================================================
+[2026-05-08 12:50:50]  [INFO   ]  Dataset shape  : 101766 rows × 48 columns
+[2026-05-08 12:50:50]  [INFO   ]  Memory usage   : 224.27 MB
+[2026-05-08 12:50:50]  [INFO   ]  Data types:
+[2026-05-08 12:50:50]  [INFO   ]    race                                     str
+[2026-05-08 12:50:50]  [INFO   ]    gender                                   str
+[2026-05-08 12:50:50]  [INFO   ]    age                                      str
+[2026-05-08 12:50:50]  [INFO   ]    weight                                   str
+[2026-05-08 12:50:50]  [INFO   ]    admission_type_id                        int64
+[2026-05-08 12:50:50]  [INFO   ]    discharge_disposition_id                 int64
+[2026-05-08 12:50:50]  [INFO   ]    admission_source_id                      int64
+[2026-05-08 12:50:50]  [INFO   ]    time_in_hospital                         int64
+[2026-05-08 12:50:50]  [INFO   ]    payer_code                               str
+[2026-05-08 12:50:50]  [INFO   ]    medical_specialty                        str
+[2026-05-08 12:50:50]  [INFO   ]    num_lab_procedures                       int64
+[2026-05-08 12:50:50]  [INFO   ]    num_procedures                           int64
+[2026-05-08 12:50:50]  [INFO   ]    num_medications                          int64
+[2026-05-08 12:50:50]  [INFO   ]    number_outpatient                        int64
+[2026-05-08 12:50:50]  [INFO   ]    number_emergency                         int64
+[2026-05-08 12:50:50]  [INFO   ]    number_inpatient                         int64
+[2026-05-08 12:50:50]  [INFO   ]    diag_1                                   str
+[2026-05-08 12:50:50]  [INFO   ]    diag_2                                   str
+[2026-05-08 12:50:50]  [INFO   ]    diag_3                                   str
+[2026-05-08 12:50:50]  [INFO   ]    number_diagnoses                         int64
+[2026-05-08 12:50:50]  [INFO   ]    max_glu_serum                            str
+[2026-05-08 12:50:50]  [INFO   ]    A1Cresult                                str
+[2026-05-08 12:50:50]  [INFO   ]    metformin                                str
+[2026-05-08 12:50:50]  [INFO   ]    repaglinide                              str
+[2026-05-08 12:50:50]  [INFO   ]    nateglinide                              str
+[2026-05-08 12:50:50]  [INFO   ]    chlorpropamide                           str
+[2026-05-08 12:50:50]  [INFO   ]    glimepiride                              str
+[2026-05-08 12:50:50]  [INFO   ]    acetohexamide                            str
+[2026-05-08 12:50:50]  [INFO   ]    glipizide                                str
+[2026-05-08 12:50:50]  [INFO   ]    glyburide                                str
+[2026-05-08 12:50:50]  [INFO   ]    tolbutamide                              str
+[2026-05-08 12:50:50]  [INFO   ]    pioglitazone                             str
+[2026-05-08 12:50:50]  [INFO   ]    rosiglitazone                            str
+[2026-05-08 12:50:50]  [INFO   ]    acarbose                                 str
+[2026-05-08 12:50:50]  [INFO   ]    miglitol                                 str
+[2026-05-08 12:50:50]  [INFO   ]    troglitazone                             str
+[2026-05-08 12:50:50]  [INFO   ]    tolazamide                               str
+[2026-05-08 12:50:50]  [INFO   ]    examide                                  str
+[2026-05-08 12:50:50]  [INFO   ]    citoglipton                              str
+[2026-05-08 12:50:50]  [INFO   ]    insulin                                  str
+[2026-05-08 12:50:50]  [INFO   ]    glyburide-metformin                      str
+[2026-05-08 12:50:50]  [INFO   ]    glipizide-metformin                      str
+[2026-05-08 12:50:50]  [INFO   ]    glimepiride-pioglitazone                 str
+[2026-05-08 12:50:50]  [INFO   ]    metformin-rosiglitazone                  str
+[2026-05-08 12:50:50]  [INFO   ]    metformin-pioglitazone                   str
+[2026-05-08 12:50:50]  [INFO   ]    change                                   str
+[2026-05-08 12:50:50]  [INFO   ]    diabetesMed                              str
+[2026-05-08 12:50:50]  [INFO   ]    readmitted                               str
+[2026-05-08 12:50:50]  [INFO   ]  First 10 rows logged.
+[2026-05-08 12:50:50]  [INFO   ]                race  gender       age weight  admission_type_id  discharge_disposition_id  admission_source_id  time_in_hospital payer_code         medical_specialty  num_lab_procedures  num_procedures  num_medications  number_outpatient  number_emergency  number_inpatient  diag_1  diag_2 diag_3  number_diagnoses max_glu_serum A1Cresult metformin repaglinide nateglinide chlorpropamide glimepiride acetohexamide glipizide glyburide tolbutamide pioglitazone rosiglitazone acarbose miglitol troglitazone tolazamide examide citoglipton insulin glyburide-metformin glipizide-metformin glimepiride-pioglitazone metformin-rosiglitazone metformin-pioglitazone change diabetesMed readmitted
+0        Caucasian  Female    [0-10)    NaN                  6                        25                    1                 1        NaN  Pediatrics-Endocrinology                  41               0                1                  0                 0                 0  250.83     NaN    NaN                 1           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No          No         NO
+1        Caucasian  Female   [10-20)    NaN                  1                         1                    7                 3        NaN                       NaN                  59               0               18                  0                 0                 0     276  250.01    255                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes        >30
+2  AfricanAmerican  Female   [20-30)    NaN                  1                         1                    7                 2        NaN                       NaN                  11               5               13                  2                 0                 1     648     250    V27                 6           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes         NO
+3        Caucasian    Male   [30-40)    NaN                  1                         1                    7                 2        NaN                       NaN                  44               1               16                  0                 0                 0       8  250.43    403                 7           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes         NO
+4        Caucasian    Male   [40-50)    NaN                  1                         1                    7                 1        NaN                       NaN                  51               0                8                  0                 0                 0     197     157    250                 5           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+5        Caucasian    Male   [50-60)    NaN                  2                         1                    2                 3        NaN                       NaN                  31               6               16                  0                 0                 0     414     411    250                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     No         Yes        >30
+6        Caucasian    Male   [60-70)    NaN                  3                         1                    2                 4        NaN                       NaN                  70               1               21                  0                 0                 0     414     411    V45                 7           NaN       NaN    Steady          No          No             No      Steady            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+7        Caucasian    Male   [70-80)    NaN                  1                         1                    7                 5        NaN                       NaN                  73               0               12                  0                 0                 0     428     492    250                 8           NaN       NaN        No          No          No             No          No            No        No    Steady          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes        >30
+8        Caucasian  Female   [80-90)    NaN                  2                         1                    4                13        NaN                       NaN                  68               2               28                  0                 0                 0     398     427     38                 8           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+9        Caucasian  Female  [90-100)    NaN                  3                         3                    4                12        NaN          InternalMedicine                  33               3               18                  0                 0                 0     434     198    486                 8           NaN       NaN        No          No          No             No          No            No        No        No          No           No        Steady       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+[2026-05-08 12:50:50]  [INFO   ]  
+======================================================================
+  PART B — INITIAL DATA QUALITY CHECK
+======================================================================
+[2026-05-08 12:50:50]  [INFO   ]                            missing_count  missing_pct
+weight                            98569        96.86
+max_glu_serum                     96420        94.75
+A1Cresult                         84748        83.28
+medical_specialty                 49949        49.08
+payer_code                        40256        39.56
+race                               2273         2.23
+diag_3                             1423         1.40
+diag_2                              358         0.35
+diag_1                               21         0.02
+time_in_hospital                      0         0.00
+num_lab_procedures                    0         0.00
+admission_source_id                   0         0.00
+admission_type_id                     0         0.00
+discharge_disposition_id              0         0.00
+gender                                0         0.00
+age                                   0         0.00
+number_inpatient                      0         0.00
+number_emergency                      0         0.00
+number_outpatient                     0         0.00
+num_medications                       0         0.00
+num_procedures                        0         0.00
+number_diagnoses                      0         0.00
+metformin                             0         0.00
+repaglinide                           0         0.00
+nateglinide                           0         0.00
+chlorpropamide                        0         0.00
+glimepiride                           0         0.00
+acetohexamide                         0         0.00
+glipizide                             0         0.00
+glyburide                             0         0.00
+tolbutamide                           0         0.00
+pioglitazone                          0         0.00
+rosiglitazone                         0         0.00
+acarbose                              0         0.00
+miglitol                              0         0.00
+troglitazone                          0         0.00
+tolazamide                            0         0.00
+examide                               0         0.00
+citoglipton                           0         0.00
+insulin                               0         0.00
+glyburide-metformin                   0         0.00
+glipizide-metformin                   0         0.00
+glimepiride-pioglitazone              0         0.00
+metformin-rosiglitazone               0         0.00
+metformin-pioglitazone                0         0.00
+change                                0         0.00
+diabetesMed                           0         0.00
+readmitted                            0         0.00
+[2026-05-08 12:50:50]  [INFO   ]  Duplicate rows: 0
+[2026-05-08 12:50:51]  [INFO   ]  Basic stats saved → D:\hospital_readmission_project\hospital_readmission_project\reports\data_quality_initial.csv
+[2026-05-08 12:50:51]  [INFO   ]  
+======================================================================
+  PART C — MISSING VALUE TREATMENT
+======================================================================
+[2026-05-08 12:50:51]  [INFO   ]    race: mode → Caucasian
+[2026-05-08 12:50:51]  [INFO   ]    weight: mode → [75-100)
+[2026-05-08 12:50:51]  [INFO   ]    payer_code: mode → MC
+[2026-05-08 12:50:51]  [INFO   ]    medical_specialty: mode → InternalMedicine
+[2026-05-08 12:50:51]  [INFO   ]    diag_1: mode → 428
+[2026-05-08 12:50:51]  [INFO   ]    diag_2: mode → 276
+[2026-05-08 12:50:51]  [INFO   ]    diag_3: mode → 250
+[2026-05-08 12:50:51]  [INFO   ]    max_glu_serum: mode → Norm
+[2026-05-08 12:50:51]  [INFO   ]    A1Cresult: mode → >8
+[2026-05-08 12:50:52]  [INFO   ]  
+======================================================================
+  PART D — DATA TYPE CORRECTIONS
+======================================================================
+[2026-05-08 12:50:52]  [INFO   ]    Converted — race: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — gender: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — age: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — admission_type_id: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — discharge_disposition_id: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — admission_source_id: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — payer_code: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — medical_specialty: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — diag_1: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — diag_2: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — diag_3: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — max_glu_serum: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — A1Cresult: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — metformin: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — repaglinide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — nateglinide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — chlorpropamide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — glimepiride: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — acetohexamide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — glipizide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — glyburide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — tolbutamide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — pioglitazone: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — rosiglitazone: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — acarbose: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — miglitol: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — troglitazone: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — tolazamide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — examide: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — citoglipton: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — insulin: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — glyburide-metformin: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — glipizide-metformin: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — glimepiride-pioglitazone: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — metformin-rosiglitazone: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — metformin-pioglitazone: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — change: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]    Converted — diabetesMed: numeric → object (categorical)
+[2026-05-08 12:50:52]  [INFO   ]  
+======================================================================
+  PART E — DUPLICATE REMOVAL
+======================================================================
+[2026-05-08 12:50:52]  [INFO   ]  Duplicate rows found: 0
+[2026-05-08 12:50:53]  [INFO   ]  
+======================================================================
+  PART F — OUTLIER DETECTION
+======================================================================
+[2026-05-08 12:50:53]  [INFO   ]    time_in_hospital: 2252 outliers → capped [1.000, 14.000]
+[2026-05-08 12:50:53]  [INFO   ]    num_lab_procedures: 143 outliers → capped [1.000, 85.000]
+[2026-05-08 12:50:53]  [INFO   ]    num_procedures: 4954 outliers → capped [0.000, 6.000]
+[2026-05-08 12:50:53]  [INFO   ]    num_medications: 2557 outliers → capped [3.000, 43.000]
+[2026-05-08 12:50:53]  [INFO   ]    number_outpatient: 16739 outliers → capped [0.000, 5.000]
+[2026-05-08 12:50:53]  [INFO   ]    number_emergency: 11383 outliers → capped [0.000, 3.000]
+[2026-05-08 12:50:53]  [INFO   ]    number_inpatient: 7049 outliers → capped [0.000, 6.000]
+[2026-05-08 12:50:53]  [INFO   ]    number_diagnoses: 281 outliers → capped [2.000, 9.000]
+[2026-05-08 12:50:54]  [INFO   ]  
+======================================================================
+  PART G — CATEGORICAL ENCODING
+======================================================================
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  acetohexamide: {'No': 0, 'Steady': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  tolbutamide: {'No': 0, 'Steady': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  troglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  examide: {'No': 0}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  citoglipton: {'No': 0}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  glipizide-metformin: {'No': 0, 'Steady': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  glimepiride-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  metformin-rosiglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  metformin-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  change: {'Ch': 0, 'No': 1}
+[2026-05-08 12:50:54]  [INFO   ]    LabelEncoded  diabetesMed: {'No': 0, 'Yes': 1}
+[2026-05-08 12:50:56]  [INFO   ]    One-Hot Encoded: ['race', 'gender', 'age', 'weight', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'payer_code', 'medical_specialty', 'diag_1', 'diag_2', 'diag_3', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'glipizide', 'glyburide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'tolazamide', 'insulin', 'glyburide-metformin']
+[2026-05-08 12:51:26]  [INFO   ]  
+======================================================================
+  PART H — PREPROCESSING REPORT
+======================================================================
+[2026-05-08 12:51:27]  [INFO   ]  Preprocessing summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\preprocessing_summary.txt
+[2026-05-08 12:51:27]  [INFO   ]  
+======================================================================
+  PART I — VISUALIZATIONS
+======================================================================
+[2026-05-08 12:51:27]  [INFO   ]  No missing values — skipping heatmap.
+[2026-05-08 12:51:28]  [INFO   ]  Saved 4 visualizations to D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda
+[2026-05-08 12:51:28]  [INFO   ]  Pipeline complete: 2026-05-08 12:51:28
+[2026-05-08 12:53:44]  [INFO   ]  =================================================================
+[2026-05-08 12:53:44]  [INFO   ]  Pipeline started: 2026-05-08 12:53:44
+[2026-05-08 12:53:44]  [INFO   ]  
+======================================================================
+  PART A — DATA LOADING
+======================================================================
+[2026-05-08 12:53:45]  [INFO   ]  Dataset shape  : 101766 rows × 48 columns
+[2026-05-08 12:53:45]  [INFO   ]  Memory usage   : 224.27 MB
+[2026-05-08 12:53:45]  [INFO   ]  Data types:
+[2026-05-08 12:53:45]  [INFO   ]    race                                     str
+[2026-05-08 12:53:45]  [INFO   ]    gender                                   str
+[2026-05-08 12:53:45]  [INFO   ]    age                                      str
+[2026-05-08 12:53:45]  [INFO   ]    weight                                   str
+[2026-05-08 12:53:45]  [INFO   ]    admission_type_id                        int64
+[2026-05-08 12:53:45]  [INFO   ]    discharge_disposition_id                 int64
+[2026-05-08 12:53:45]  [INFO   ]    admission_source_id                      int64
+[2026-05-08 12:53:45]  [INFO   ]    time_in_hospital                         int64
+[2026-05-08 12:53:45]  [INFO   ]    payer_code                               str
+[2026-05-08 12:53:45]  [INFO   ]    medical_specialty                        str
+[2026-05-08 12:53:45]  [INFO   ]    num_lab_procedures                       int64
+[2026-05-08 12:53:45]  [INFO   ]    num_procedures                           int64
+[2026-05-08 12:53:45]  [INFO   ]    num_medications                          int64
+[2026-05-08 12:53:45]  [INFO   ]    number_outpatient                        int64
+[2026-05-08 12:53:45]  [INFO   ]    number_emergency                         int64
+[2026-05-08 12:53:45]  [INFO   ]    number_inpatient                         int64
+[2026-05-08 12:53:45]  [INFO   ]    diag_1                                   str
+[2026-05-08 12:53:45]  [INFO   ]    diag_2                                   str
+[2026-05-08 12:53:45]  [INFO   ]    diag_3                                   str
+[2026-05-08 12:53:45]  [INFO   ]    number_diagnoses                         int64
+[2026-05-08 12:53:45]  [INFO   ]    max_glu_serum                            str
+[2026-05-08 12:53:45]  [INFO   ]    A1Cresult                                str
+[2026-05-08 12:53:45]  [INFO   ]    metformin                                str
+[2026-05-08 12:53:45]  [INFO   ]    repaglinide                              str
+[2026-05-08 12:53:45]  [INFO   ]    nateglinide                              str
+[2026-05-08 12:53:45]  [INFO   ]    chlorpropamide                           str
+[2026-05-08 12:53:45]  [INFO   ]    glimepiride                              str
+[2026-05-08 12:53:45]  [INFO   ]    acetohexamide                            str
+[2026-05-08 12:53:45]  [INFO   ]    glipizide                                str
+[2026-05-08 12:53:45]  [INFO   ]    glyburide                                str
+[2026-05-08 12:53:45]  [INFO   ]    tolbutamide                              str
+[2026-05-08 12:53:45]  [INFO   ]    pioglitazone                             str
+[2026-05-08 12:53:45]  [INFO   ]    rosiglitazone                            str
+[2026-05-08 12:53:45]  [INFO   ]    acarbose                                 str
+[2026-05-08 12:53:45]  [INFO   ]    miglitol                                 str
+[2026-05-08 12:53:45]  [INFO   ]    troglitazone                             str
+[2026-05-08 12:53:45]  [INFO   ]    tolazamide                               str
+[2026-05-08 12:53:45]  [INFO   ]    examide                                  str
+[2026-05-08 12:53:45]  [INFO   ]    citoglipton                              str
+[2026-05-08 12:53:45]  [INFO   ]    insulin                                  str
+[2026-05-08 12:53:45]  [INFO   ]    glyburide-metformin                      str
+[2026-05-08 12:53:45]  [INFO   ]    glipizide-metformin                      str
+[2026-05-08 12:53:45]  [INFO   ]    glimepiride-pioglitazone                 str
+[2026-05-08 12:53:45]  [INFO   ]    metformin-rosiglitazone                  str
+[2026-05-08 12:53:45]  [INFO   ]    metformin-pioglitazone                   str
+[2026-05-08 12:53:45]  [INFO   ]    change                                   str
+[2026-05-08 12:53:45]  [INFO   ]    diabetesMed                              str
+[2026-05-08 12:53:45]  [INFO   ]    readmitted                               str
+[2026-05-08 12:53:45]  [INFO   ]  First 10 rows logged.
+[2026-05-08 12:53:45]  [INFO   ]                race  gender       age weight  admission_type_id  discharge_disposition_id  admission_source_id  time_in_hospital payer_code         medical_specialty  num_lab_procedures  num_procedures  num_medications  number_outpatient  number_emergency  number_inpatient  diag_1  diag_2 diag_3  number_diagnoses max_glu_serum A1Cresult metformin repaglinide nateglinide chlorpropamide glimepiride acetohexamide glipizide glyburide tolbutamide pioglitazone rosiglitazone acarbose miglitol troglitazone tolazamide examide citoglipton insulin glyburide-metformin glipizide-metformin glimepiride-pioglitazone metformin-rosiglitazone metformin-pioglitazone change diabetesMed readmitted
+0        Caucasian  Female    [0-10)    NaN                  6                        25                    1                 1        NaN  Pediatrics-Endocrinology                  41               0                1                  0                 0                 0  250.83     NaN    NaN                 1           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No          No         NO
+1        Caucasian  Female   [10-20)    NaN                  1                         1                    7                 3        NaN                       NaN                  59               0               18                  0                 0                 0     276  250.01    255                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes        >30
+2  AfricanAmerican  Female   [20-30)    NaN                  1                         1                    7                 2        NaN                       NaN                  11               5               13                  2                 0                 1     648     250    V27                 6           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes         NO
+3        Caucasian    Male   [30-40)    NaN                  1                         1                    7                 2        NaN                       NaN                  44               1               16                  0                 0                 0       8  250.43    403                 7           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes         NO
+4        Caucasian    Male   [40-50)    NaN                  1                         1                    7                 1        NaN                       NaN                  51               0                8                  0                 0                 0     197     157    250                 5           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+5        Caucasian    Male   [50-60)    NaN                  2                         1                    2                 3        NaN                       NaN                  31               6               16                  0                 0                 0     414     411    250                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     No         Yes        >30
+6        Caucasian    Male   [60-70)    NaN                  3                         1                    2                 4        NaN                       NaN                  70               1               21                  0                 0                 0     414     411    V45                 7           NaN       NaN    Steady          No          No             No      Steady            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+7        Caucasian    Male   [70-80)    NaN                  1                         1                    7                 5        NaN                       NaN                  73               0               12                  0                 0                 0     428     492    250                 8           NaN       NaN        No          No          No             No          No            No        No    Steady          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes        >30
+8        Caucasian  Female   [80-90)    NaN                  2                         1                    4                13        NaN                       NaN                  68               2               28                  0                 0                 0     398     427     38                 8           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+9        Caucasian  Female  [90-100)    NaN                  3                         3                    4                12        NaN          InternalMedicine                  33               3               18                  0                 0                 0     434     198    486                 8           NaN       NaN        No          No          No             No          No            No        No        No          No           No        Steady       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+[2026-05-08 12:53:45]  [INFO   ]  
+======================================================================
+  PART B — INITIAL DATA QUALITY CHECK
+======================================================================
+[2026-05-08 12:53:45]  [INFO   ]                            missing_count  missing_pct
+weight                            98569        96.86
+max_glu_serum                     96420        94.75
+A1Cresult                         84748        83.28
+medical_specialty                 49949        49.08
+payer_code                        40256        39.56
+race                               2273         2.23
+diag_3                             1423         1.40
+diag_2                              358         0.35
+diag_1                               21         0.02
+time_in_hospital                      0         0.00
+num_lab_procedures                    0         0.00
+admission_source_id                   0         0.00
+admission_type_id                     0         0.00
+discharge_disposition_id              0         0.00
+gender                                0         0.00
+age                                   0         0.00
+number_inpatient                      0         0.00
+number_emergency                      0         0.00
+number_outpatient                     0         0.00
+num_medications                       0         0.00
+num_procedures                        0         0.00
+number_diagnoses                      0         0.00
+metformin                             0         0.00
+repaglinide                           0         0.00
+nateglinide                           0         0.00
+chlorpropamide                        0         0.00
+glimepiride                           0         0.00
+acetohexamide                         0         0.00
+glipizide                             0         0.00
+glyburide                             0         0.00
+tolbutamide                           0         0.00
+pioglitazone                          0         0.00
+rosiglitazone                         0         0.00
+acarbose                              0         0.00
+miglitol                              0         0.00
+troglitazone                          0         0.00
+tolazamide                            0         0.00
+examide                               0         0.00
+citoglipton                           0         0.00
+insulin                               0         0.00
+glyburide-metformin                   0         0.00
+glipizide-metformin                   0         0.00
+glimepiride-pioglitazone              0         0.00
+metformin-rosiglitazone               0         0.00
+metformin-pioglitazone                0         0.00
+change                                0         0.00
+diabetesMed                           0         0.00
+readmitted                            0         0.00
+[2026-05-08 12:53:46]  [INFO   ]  Duplicate rows: 0
+[2026-05-08 12:53:46]  [INFO   ]  Basic stats saved → D:\hospital_readmission_project\hospital_readmission_project\reports\data_quality_initial.csv
+[2026-05-08 12:53:46]  [INFO   ]  
+======================================================================
+  PART C — MISSING VALUE TREATMENT
+======================================================================
+[2026-05-08 12:53:47]  [INFO   ]    race: mode → Caucasian
+[2026-05-08 12:53:47]  [INFO   ]    weight: mode → [75-100)
+[2026-05-08 12:53:47]  [INFO   ]    payer_code: mode → MC
+[2026-05-08 12:53:47]  [INFO   ]    medical_specialty: mode → InternalMedicine
+[2026-05-08 12:53:47]  [INFO   ]    diag_1: mode → 428
+[2026-05-08 12:53:47]  [INFO   ]    diag_2: mode → 276
+[2026-05-08 12:53:47]  [INFO   ]    diag_3: mode → 250
+[2026-05-08 12:53:47]  [INFO   ]    max_glu_serum: mode → Norm
+[2026-05-08 12:53:47]  [INFO   ]    A1Cresult: mode → >8
+[2026-05-08 12:53:47]  [INFO   ]  
+======================================================================
+  PART D — DATA TYPE CORRECTIONS
+======================================================================
+[2026-05-08 12:53:47]  [INFO   ]    Converted — race: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — gender: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — age: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — admission_type_id: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — discharge_disposition_id: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — admission_source_id: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — payer_code: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — medical_specialty: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — diag_1: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — diag_2: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — diag_3: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — max_glu_serum: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — A1Cresult: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — metformin: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — repaglinide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — nateglinide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — chlorpropamide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — glimepiride: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — acetohexamide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — glipizide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — glyburide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — tolbutamide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — pioglitazone: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — rosiglitazone: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — acarbose: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — miglitol: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — troglitazone: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — tolazamide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — examide: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — citoglipton: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — insulin: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — glyburide-metformin: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — glipizide-metformin: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — glimepiride-pioglitazone: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — metformin-rosiglitazone: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — metformin-pioglitazone: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — change: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]    Converted — diabetesMed: numeric → object (categorical)
+[2026-05-08 12:53:47]  [INFO   ]  
+======================================================================
+  PART E — DUPLICATE REMOVAL
+======================================================================
+[2026-05-08 12:53:48]  [INFO   ]  Duplicate rows found: 0
+[2026-05-08 12:53:48]  [INFO   ]  
+======================================================================
+  PART F — OUTLIER DETECTION
+======================================================================
+[2026-05-08 12:53:48]  [INFO   ]    time_in_hospital: 2252 outliers → capped [1.000, 14.000]
+[2026-05-08 12:53:48]  [INFO   ]    num_lab_procedures: 143 outliers → capped [1.000, 85.000]
+[2026-05-08 12:53:48]  [INFO   ]    num_procedures: 4954 outliers → capped [0.000, 6.000]
+[2026-05-08 12:53:48]  [INFO   ]    num_medications: 2557 outliers → capped [3.000, 43.000]
+[2026-05-08 12:53:48]  [INFO   ]    number_outpatient: 16739 outliers → capped [0.000, 5.000]
+[2026-05-08 12:53:48]  [INFO   ]    number_emergency: 11383 outliers → capped [0.000, 3.000]
+[2026-05-08 12:53:48]  [INFO   ]    number_inpatient: 7049 outliers → capped [0.000, 6.000]
+[2026-05-08 12:53:48]  [INFO   ]    number_diagnoses: 281 outliers → capped [2.000, 9.000]
+[2026-05-08 12:53:50]  [INFO   ]  
+======================================================================
+  PART G — CATEGORICAL ENCODING
+======================================================================
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  acetohexamide: {'No': 0, 'Steady': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  tolbutamide: {'No': 0, 'Steady': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  troglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  examide: {'No': 0}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  citoglipton: {'No': 0}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  glipizide-metformin: {'No': 0, 'Steady': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  glimepiride-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  metformin-rosiglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  metformin-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  change: {'Ch': 0, 'No': 1}
+[2026-05-08 12:53:50]  [INFO   ]    LabelEncoded  diabetesMed: {'No': 0, 'Yes': 1}
+[2026-05-08 12:53:51]  [INFO   ]    One-Hot Encoded: ['race', 'gender', 'age', 'weight', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'payer_code', 'medical_specialty', 'diag_1', 'diag_2', 'diag_3', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'glipizide', 'glyburide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'tolazamide', 'insulin', 'glyburide-metformin']
+[2026-05-08 12:54:23]  [INFO   ]  
+======================================================================
+  PART H — PREPROCESSING REPORT
+======================================================================
+[2026-05-08 12:54:23]  [INFO   ]  Preprocessing summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\preprocessing_summary.txt
+[2026-05-08 12:54:23]  [INFO   ]  
+======================================================================
+  PART I — VISUALIZATIONS
+======================================================================
+[2026-05-08 12:54:23]  [INFO   ]  No missing values — skipping heatmap.
+[2026-05-08 12:54:25]  [INFO   ]  Saved 4 visualizations to D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda
+[2026-05-08 12:54:25]  [INFO   ]  Pipeline complete: 2026-05-08 12:54:25
+[2026-08-15 19:50:09]  [INFO   ]  =================================================================
+[2026-08-15 19:50:09]  [INFO   ]  Pipeline started: 2026-08-15 19:50:09
+[2026-08-15 19:50:09]  [INFO   ]  
+======================================================================
+  PART A — DATA LOADING
+======================================================================
+[2026-08-15 19:50:10]  [INFO   ]  Dataset shape  : 101766 rows × 48 columns
+[2026-08-15 19:50:10]  [INFO   ]  Memory usage   : 197.14 MB
+[2026-08-15 19:50:10]  [INFO   ]  Data types:
+[2026-08-15 19:50:10]  [INFO   ]    race                                     str
+[2026-08-15 19:50:10]  [INFO   ]    gender                                   str
+[2026-08-15 19:50:10]  [INFO   ]    age                                      str
+[2026-08-15 19:50:10]  [INFO   ]    weight                                   str
+[2026-08-15 19:50:10]  [INFO   ]    admission_type_id                        int64
+[2026-08-15 19:50:10]  [INFO   ]    discharge_disposition_id                 int64
+[2026-08-15 19:50:10]  [INFO   ]    admission_source_id                      int64
+[2026-08-15 19:50:10]  [INFO   ]    time_in_hospital                         int64
+[2026-08-15 19:50:10]  [INFO   ]    payer_code                               str
+[2026-08-15 19:50:10]  [INFO   ]    medical_specialty                        str
+[2026-08-15 19:50:10]  [INFO   ]    num_lab_procedures                       int64
+[2026-08-15 19:50:10]  [INFO   ]    num_procedures                           int64
+[2026-08-15 19:50:10]  [INFO   ]    num_medications                          int64
+[2026-08-15 19:50:10]  [INFO   ]    number_outpatient                        int64
+[2026-08-15 19:50:10]  [INFO   ]    number_emergency                         int64
+[2026-08-15 19:50:10]  [INFO   ]    number_inpatient                         int64
+[2026-08-15 19:50:10]  [INFO   ]    diag_1                                   str
+[2026-08-15 19:50:10]  [INFO   ]    diag_2                                   str
+[2026-08-15 19:50:10]  [INFO   ]    diag_3                                   str
+[2026-08-15 19:50:10]  [INFO   ]    number_diagnoses                         int64
+[2026-08-15 19:50:10]  [INFO   ]    max_glu_serum                            str
+[2026-08-15 19:50:10]  [INFO   ]    A1Cresult                                str
+[2026-08-15 19:50:10]  [INFO   ]    metformin                                str
+[2026-08-15 19:50:10]  [INFO   ]    repaglinide                              str
+[2026-08-15 19:50:10]  [INFO   ]    nateglinide                              str
+[2026-08-15 19:50:10]  [INFO   ]    chlorpropamide                           str
+[2026-08-15 19:50:10]  [INFO   ]    glimepiride                              str
+[2026-08-15 19:50:10]  [INFO   ]    acetohexamide                            str
+[2026-08-15 19:50:10]  [INFO   ]    glipizide                                str
+[2026-08-15 19:50:10]  [INFO   ]    glyburide                                str
+[2026-08-15 19:50:10]  [INFO   ]    tolbutamide                              str
+[2026-08-15 19:50:10]  [INFO   ]    pioglitazone                             str
+[2026-08-15 19:50:10]  [INFO   ]    rosiglitazone                            str
+[2026-08-15 19:50:10]  [INFO   ]    acarbose                                 str
+[2026-08-15 19:50:10]  [INFO   ]    miglitol                                 str
+[2026-08-15 19:50:10]  [INFO   ]    troglitazone                             str
+[2026-08-15 19:50:10]  [INFO   ]    tolazamide                               str
+[2026-08-15 19:50:10]  [INFO   ]    examide                                  str
+[2026-08-15 19:50:10]  [INFO   ]    citoglipton                              str
+[2026-08-15 19:50:10]  [INFO   ]    insulin                                  str
+[2026-08-15 19:50:10]  [INFO   ]    glyburide-metformin                      str
+[2026-08-15 19:50:10]  [INFO   ]    glipizide-metformin                      str
+[2026-08-15 19:50:10]  [INFO   ]    glimepiride-pioglitazone                 str
+[2026-08-15 19:50:10]  [INFO   ]    metformin-rosiglitazone                  str
+[2026-08-15 19:50:10]  [INFO   ]    metformin-pioglitazone                   str
+[2026-08-15 19:50:10]  [INFO   ]    change                                   str
+[2026-08-15 19:50:10]  [INFO   ]    diabetesMed                              str
+[2026-08-15 19:50:10]  [INFO   ]    readmitted                               str
+[2026-08-15 19:50:10]  [INFO   ]  First 10 rows logged.
+[2026-08-15 19:50:10]  [INFO   ]                race  gender       age weight  admission_type_id  discharge_disposition_id  admission_source_id  time_in_hospital payer_code         medical_specialty  num_lab_procedures  num_procedures  num_medications  number_outpatient  number_emergency  number_inpatient  diag_1  diag_2 diag_3  number_diagnoses max_glu_serum A1Cresult metformin repaglinide nateglinide chlorpropamide glimepiride acetohexamide glipizide glyburide tolbutamide pioglitazone rosiglitazone acarbose miglitol troglitazone tolazamide examide citoglipton insulin glyburide-metformin glipizide-metformin glimepiride-pioglitazone metformin-rosiglitazone metformin-pioglitazone change diabetesMed readmitted
+0        Caucasian  Female    [0-10)    NaN                  6                        25                    1                 1        NaN  Pediatrics-Endocrinology                  41               0                1                  0                 0                 0  250.83     NaN    NaN                 1           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No          No         NO
+1        Caucasian  Female   [10-20)    NaN                  1                         1                    7                 3        NaN                       NaN                  59               0               18                  0                 0                 0     276  250.01    255                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes        >30
+2  AfricanAmerican  Female   [20-30)    NaN                  1                         1                    7                 2        NaN                       NaN                  11               5               13                  2                 0                 1     648     250    V27                 6           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes         NO
+3        Caucasian    Male   [30-40)    NaN                  1                         1                    7                 2        NaN                       NaN                  44               1               16                  0                 0                 0       8  250.43    403                 7           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes         NO
+4        Caucasian    Male   [40-50)    NaN                  1                         1                    7                 1        NaN                       NaN                  51               0                8                  0                 0                 0     197     157    250                 5           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+5        Caucasian    Male   [50-60)    NaN                  2                         1                    2                 3        NaN                       NaN                  31               6               16                  0                 0                 0     414     411    250                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     No         Yes        >30
+6        Caucasian    Male   [60-70)    NaN                  3                         1                    2                 4        NaN                       NaN                  70               1               21                  0                 0                 0     414     411    V45                 7           NaN       NaN    Steady          No          No             No      Steady            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+7        Caucasian    Male   [70-80)    NaN                  1                         1                    7                 5        NaN                       NaN                  73               0               12                  0                 0                 0     428     492    250                 8           NaN       NaN        No          No          No             No          No            No        No    Steady          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes        >30
+8        Caucasian  Female   [80-90)    NaN                  2                         1                    4                13        NaN                       NaN                  68               2               28                  0                 0                 0     398     427     38                 8           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+9        Caucasian  Female  [90-100)    NaN                  3                         3                    4                12        NaN          InternalMedicine                  33               3               18                  0                 0                 0     434     198    486                 8           NaN       NaN        No          No          No             No          No            No        No        No          No           No        Steady       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+[2026-08-15 19:50:10]  [INFO   ]  
+======================================================================
+  PART B — INITIAL DATA QUALITY CHECK
+======================================================================
+[2026-08-15 19:50:10]  [INFO   ]                            missing_count  missing_pct
+weight                            98569        96.86
+max_glu_serum                     96420        94.75
+A1Cresult                         84748        83.28
+medical_specialty                 49949        49.08
+payer_code                        40256        39.56
+race                               2273         2.23
+diag_3                             1423         1.40
+diag_2                              358         0.35
+diag_1                               21         0.02
+time_in_hospital                      0         0.00
+num_lab_procedures                    0         0.00
+admission_source_id                   0         0.00
+admission_type_id                     0         0.00
+discharge_disposition_id              0         0.00
+gender                                0         0.00
+age                                   0         0.00
+number_inpatient                      0         0.00
+number_emergency                      0         0.00
+number_outpatient                     0         0.00
+num_medications                       0         0.00
+num_procedures                        0         0.00
+number_diagnoses                      0         0.00
+metformin                             0         0.00
+repaglinide                           0         0.00
+nateglinide                           0         0.00
+chlorpropamide                        0         0.00
+glimepiride                           0         0.00
+acetohexamide                         0         0.00
+glipizide                             0         0.00
+glyburide                             0         0.00
+tolbutamide                           0         0.00
+pioglitazone                          0         0.00
+rosiglitazone                         0         0.00
+acarbose                              0         0.00
+miglitol                              0         0.00
+troglitazone                          0         0.00
+tolazamide                            0         0.00
+examide                               0         0.00
+citoglipton                           0         0.00
+insulin                               0         0.00
+glyburide-metformin                   0         0.00
+glipizide-metformin                   0         0.00
+glimepiride-pioglitazone              0         0.00
+metformin-rosiglitazone               0         0.00
+metformin-pioglitazone                0         0.00
+change                                0         0.00
+diabetesMed                           0         0.00
+readmitted                            0         0.00
+[2026-08-15 19:50:10]  [INFO   ]  Duplicate rows: 0
+[2026-08-15 19:50:11]  [INFO   ]  Basic stats saved → D:\hospital_readmission_project\hospital_readmission_project\reports\data_quality_initial.csv
+[2026-08-15 19:50:11]  [INFO   ]  
+======================================================================
+  PART C — MISSING VALUE TREATMENT
+======================================================================
+[2026-08-15 19:50:12]  [INFO   ]    race: mode → Caucasian
+[2026-08-15 19:50:12]  [INFO   ]    weight: mode → [75-100)
+[2026-08-15 19:50:12]  [INFO   ]    payer_code: mode → MC
+[2026-08-15 19:50:12]  [INFO   ]    medical_specialty: mode → InternalMedicine
+[2026-08-15 19:50:12]  [INFO   ]    diag_1: mode → 428
+[2026-08-15 19:50:12]  [INFO   ]    diag_2: mode → 276
+[2026-08-15 19:50:12]  [INFO   ]    diag_3: mode → 250
+[2026-08-15 19:50:12]  [INFO   ]    max_glu_serum: mode → Norm
+[2026-08-15 19:50:12]  [INFO   ]    A1Cresult: mode → >8
+[2026-08-15 19:50:12]  [INFO   ]  
+======================================================================
+  PART D — DATA TYPE CORRECTIONS
+======================================================================
+[2026-08-15 19:50:13]  [INFO   ]    Converted — race: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — gender: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — age: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — admission_type_id: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — discharge_disposition_id: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — admission_source_id: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — payer_code: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — medical_specialty: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — diag_1: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — diag_2: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — diag_3: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — max_glu_serum: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — A1Cresult: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — metformin: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — repaglinide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — nateglinide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — chlorpropamide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — glimepiride: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — acetohexamide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — glipizide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — glyburide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — tolbutamide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — pioglitazone: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — rosiglitazone: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — acarbose: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — miglitol: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — troglitazone: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — tolazamide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — examide: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — citoglipton: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — insulin: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — glyburide-metformin: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — glipizide-metformin: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — glimepiride-pioglitazone: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — metformin-rosiglitazone: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — metformin-pioglitazone: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — change: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]    Converted — diabetesMed: numeric → object (categorical)
+[2026-08-15 19:50:13]  [INFO   ]  
+======================================================================
+  PART E — DUPLICATE REMOVAL
+======================================================================
+[2026-08-15 19:50:13]  [INFO   ]  Duplicate rows found: 0
+[2026-08-15 19:50:13]  [INFO   ]  
+======================================================================
+  PART F — OUTLIER DETECTION
+======================================================================
+[2026-08-15 19:50:13]  [INFO   ]    time_in_hospital: 2252 outliers → capped [1.000, 14.000]
+[2026-08-15 19:50:13]  [INFO   ]    num_lab_procedures: 143 outliers → capped [1.000, 85.000]
+[2026-08-15 19:50:13]  [INFO   ]    num_procedures: 4954 outliers → capped [0.000, 6.000]
+[2026-08-15 19:50:13]  [INFO   ]    num_medications: 2557 outliers → capped [3.000, 43.000]
+[2026-08-15 19:50:13]  [INFO   ]    number_outpatient: 16739 outliers → capped [0.000, 5.000]
+[2026-08-15 19:50:14]  [INFO   ]    number_emergency: 11383 outliers → capped [0.000, 3.000]
+[2026-08-15 19:50:14]  [INFO   ]    number_inpatient: 7049 outliers → capped [0.000, 6.000]
+[2026-08-15 19:50:14]  [INFO   ]    number_diagnoses: 281 outliers → capped [2.000, 9.000]
+[2026-08-15 19:50:15]  [INFO   ]  
+======================================================================
+  PART G — CATEGORICAL ENCODING
+======================================================================
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  acetohexamide: {'No': 0, 'Steady': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  tolbutamide: {'No': 0, 'Steady': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  troglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  examide: {'No': 0}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  citoglipton: {'No': 0}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  glipizide-metformin: {'No': 0, 'Steady': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  glimepiride-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  metformin-rosiglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  metformin-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  change: {'Ch': 0, 'No': 1}
+[2026-08-15 19:50:15]  [INFO   ]    LabelEncoded  diabetesMed: {'No': 0, 'Yes': 1}
+[2026-08-15 19:50:17]  [INFO   ]    One-Hot Encoded: ['race', 'gender', 'age', 'weight', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'payer_code', 'medical_specialty', 'diag_1', 'diag_2', 'diag_3', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'glipizide', 'glyburide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'tolazamide', 'insulin', 'glyburide-metformin']
+[2026-08-15 19:50:49]  [INFO   ]  
+======================================================================
+  PART H — PREPROCESSING REPORT
+======================================================================
+[2026-08-15 19:50:50]  [INFO   ]  Preprocessing summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\preprocessing_summary.txt
+[2026-08-15 19:50:50]  [INFO   ]  
+======================================================================
+  PART I — VISUALIZATIONS
+======================================================================
+[2026-08-15 19:50:50]  [INFO   ]  No missing values — skipping heatmap.
+[2026-08-15 19:50:52]  [INFO   ]  Saved 4 visualizations to D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda
+[2026-08-15 19:50:52]  [INFO   ]  Pipeline complete: 2026-08-15 19:50:52
+[2026-08-15 19:51:20]  [INFO   ]  =================================================================
+[2026-08-15 19:51:20]  [INFO   ]  Pipeline started: 2026-08-15 19:51:20
+[2026-08-15 19:51:20]  [INFO   ]  
+======================================================================
+  PART A — DATA LOADING
+======================================================================
+[2026-08-15 19:51:21]  [INFO   ]  Dataset shape  : 101766 rows × 48 columns
+[2026-08-15 19:51:21]  [INFO   ]  Memory usage   : 197.14 MB
+[2026-08-15 19:51:21]  [INFO   ]  Data types:
+[2026-08-15 19:51:21]  [INFO   ]    race                                     str
+[2026-08-15 19:51:21]  [INFO   ]    gender                                   str
+[2026-08-15 19:51:21]  [INFO   ]    age                                      str
+[2026-08-15 19:51:21]  [INFO   ]    weight                                   str
+[2026-08-15 19:51:21]  [INFO   ]    admission_type_id                        int64
+[2026-08-15 19:51:21]  [INFO   ]    discharge_disposition_id                 int64
+[2026-08-15 19:51:21]  [INFO   ]    admission_source_id                      int64
+[2026-08-15 19:51:21]  [INFO   ]    time_in_hospital                         int64
+[2026-08-15 19:51:21]  [INFO   ]    payer_code                               str
+[2026-08-15 19:51:21]  [INFO   ]    medical_specialty                        str
+[2026-08-15 19:51:21]  [INFO   ]    num_lab_procedures                       int64
+[2026-08-15 19:51:21]  [INFO   ]    num_procedures                           int64
+[2026-08-15 19:51:21]  [INFO   ]    num_medications                          int64
+[2026-08-15 19:51:21]  [INFO   ]    number_outpatient                        int64
+[2026-08-15 19:51:21]  [INFO   ]    number_emergency                         int64
+[2026-08-15 19:51:21]  [INFO   ]    number_inpatient                         int64
+[2026-08-15 19:51:21]  [INFO   ]    diag_1                                   str
+[2026-08-15 19:51:21]  [INFO   ]    diag_2                                   str
+[2026-08-15 19:51:21]  [INFO   ]    diag_3                                   str
+[2026-08-15 19:51:21]  [INFO   ]    number_diagnoses                         int64
+[2026-08-15 19:51:21]  [INFO   ]    max_glu_serum                            str
+[2026-08-15 19:51:21]  [INFO   ]    A1Cresult                                str
+[2026-08-15 19:51:21]  [INFO   ]    metformin                                str
+[2026-08-15 19:51:21]  [INFO   ]    repaglinide                              str
+[2026-08-15 19:51:21]  [INFO   ]    nateglinide                              str
+[2026-08-15 19:51:21]  [INFO   ]    chlorpropamide                           str
+[2026-08-15 19:51:21]  [INFO   ]    glimepiride                              str
+[2026-08-15 19:51:21]  [INFO   ]    acetohexamide                            str
+[2026-08-15 19:51:21]  [INFO   ]    glipizide                                str
+[2026-08-15 19:51:21]  [INFO   ]    glyburide                                str
+[2026-08-15 19:51:21]  [INFO   ]    tolbutamide                              str
+[2026-08-15 19:51:21]  [INFO   ]    pioglitazone                             str
+[2026-08-15 19:51:21]  [INFO   ]    rosiglitazone                            str
+[2026-08-15 19:51:21]  [INFO   ]    acarbose                                 str
+[2026-08-15 19:51:21]  [INFO   ]    miglitol                                 str
+[2026-08-15 19:51:21]  [INFO   ]    troglitazone                             str
+[2026-08-15 19:51:21]  [INFO   ]    tolazamide                               str
+[2026-08-15 19:51:21]  [INFO   ]    examide                                  str
+[2026-08-15 19:51:21]  [INFO   ]    citoglipton                              str
+[2026-08-15 19:51:21]  [INFO   ]    insulin                                  str
+[2026-08-15 19:51:21]  [INFO   ]    glyburide-metformin                      str
+[2026-08-15 19:51:21]  [INFO   ]    glipizide-metformin                      str
+[2026-08-15 19:51:21]  [INFO   ]    glimepiride-pioglitazone                 str
+[2026-08-15 19:51:21]  [INFO   ]    metformin-rosiglitazone                  str
+[2026-08-15 19:51:21]  [INFO   ]    metformin-pioglitazone                   str
+[2026-08-15 19:51:21]  [INFO   ]    change                                   str
+[2026-08-15 19:51:21]  [INFO   ]    diabetesMed                              str
+[2026-08-15 19:51:21]  [INFO   ]    readmitted                               str
+[2026-08-15 19:51:21]  [INFO   ]  First 10 rows logged.
+[2026-08-15 19:51:21]  [INFO   ]                race  gender       age weight  admission_type_id  discharge_disposition_id  admission_source_id  time_in_hospital payer_code         medical_specialty  num_lab_procedures  num_procedures  num_medications  number_outpatient  number_emergency  number_inpatient  diag_1  diag_2 diag_3  number_diagnoses max_glu_serum A1Cresult metformin repaglinide nateglinide chlorpropamide glimepiride acetohexamide glipizide glyburide tolbutamide pioglitazone rosiglitazone acarbose miglitol troglitazone tolazamide examide citoglipton insulin glyburide-metformin glipizide-metformin glimepiride-pioglitazone metformin-rosiglitazone metformin-pioglitazone change diabetesMed readmitted
+0        Caucasian  Female    [0-10)    NaN                  6                        25                    1                 1        NaN  Pediatrics-Endocrinology                  41               0                1                  0                 0                 0  250.83     NaN    NaN                 1           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No          No         NO
+1        Caucasian  Female   [10-20)    NaN                  1                         1                    7                 3        NaN                       NaN                  59               0               18                  0                 0                 0     276  250.01    255                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes        >30
+2  AfricanAmerican  Female   [20-30)    NaN                  1                         1                    7                 2        NaN                       NaN                  11               5               13                  2                 0                 1     648     250    V27                 6           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes         NO
+3        Caucasian    Male   [30-40)    NaN                  1                         1                    7                 2        NaN                       NaN                  44               1               16                  0                 0                 0       8  250.43    403                 7           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No      Up                  No                  No                       No                      No                     No     Ch         Yes         NO
+4        Caucasian    Male   [40-50)    NaN                  1                         1                    7                 1        NaN                       NaN                  51               0                8                  0                 0                 0     197     157    250                 5           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+5        Caucasian    Male   [50-60)    NaN                  2                         1                    2                 3        NaN                       NaN                  31               6               16                  0                 0                 0     414     411    250                 9           NaN       NaN        No          No          No             No          No            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     No         Yes        >30
+6        Caucasian    Male   [60-70)    NaN                  3                         1                    2                 4        NaN                       NaN                  70               1               21                  0                 0                 0     414     411    V45                 7           NaN       NaN    Steady          No          No             No      Steady            No        No        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+7        Caucasian    Male   [70-80)    NaN                  1                         1                    7                 5        NaN                       NaN                  73               0               12                  0                 0                 0     428     492    250                 8           NaN       NaN        No          No          No             No          No            No        No    Steady          No           No            No       No       No           No         No      No          No      No                  No                  No                       No                      No                     No     No         Yes        >30
+8        Caucasian  Female   [80-90)    NaN                  2                         1                    4                13        NaN                       NaN                  68               2               28                  0                 0                 0     398     427     38                 8           NaN       NaN        No          No          No             No          No            No    Steady        No          No           No            No       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+9        Caucasian  Female  [90-100)    NaN                  3                         3                    4                12        NaN          InternalMedicine                  33               3               18                  0                 0                 0     434     198    486                 8           NaN       NaN        No          No          No             No          No            No        No        No          No           No        Steady       No       No           No         No      No          No  Steady                  No                  No                       No                      No                     No     Ch         Yes         NO
+[2026-08-15 19:51:21]  [INFO   ]  
+======================================================================
+  PART B — INITIAL DATA QUALITY CHECK
+======================================================================
+[2026-08-15 19:51:21]  [INFO   ]                            missing_count  missing_pct
+weight                            98569        96.86
+max_glu_serum                     96420        94.75
+A1Cresult                         84748        83.28
+medical_specialty                 49949        49.08
+payer_code                        40256        39.56
+race                               2273         2.23
+diag_3                             1423         1.40
+diag_2                              358         0.35
+diag_1                               21         0.02
+time_in_hospital                      0         0.00
+num_lab_procedures                    0         0.00
+admission_source_id                   0         0.00
+admission_type_id                     0         0.00
+discharge_disposition_id              0         0.00
+gender                                0         0.00
+age                                   0         0.00
+number_inpatient                      0         0.00
+number_emergency                      0         0.00
+number_outpatient                     0         0.00
+num_medications                       0         0.00
+num_procedures                        0         0.00
+number_diagnoses                      0         0.00
+metformin                             0         0.00
+repaglinide                           0         0.00
+nateglinide                           0         0.00
+chlorpropamide                        0         0.00
+glimepiride                           0         0.00
+acetohexamide                         0         0.00
+glipizide                             0         0.00
+glyburide                             0         0.00
+tolbutamide                           0         0.00
+pioglitazone                          0         0.00
+rosiglitazone                         0         0.00
+acarbose                              0         0.00
+miglitol                              0         0.00
+troglitazone                          0         0.00
+tolazamide                            0         0.00
+examide                               0         0.00
+citoglipton                           0         0.00
+insulin                               0         0.00
+glyburide-metformin                   0         0.00
+glipizide-metformin                   0         0.00
+glimepiride-pioglitazone              0         0.00
+metformin-rosiglitazone               0         0.00
+metformin-pioglitazone                0         0.00
+change                                0         0.00
+diabetesMed                           0         0.00
+readmitted                            0         0.00
+[2026-08-15 19:51:21]  [INFO   ]  Duplicate rows: 0
+[2026-08-15 19:51:21]  [INFO   ]  Basic stats saved → D:\hospital_readmission_project\hospital_readmission_project\reports\data_quality_initial.csv
+[2026-08-15 19:51:22]  [INFO   ]  
+======================================================================
+  PART C — MISSING VALUE TREATMENT
+======================================================================
+[2026-08-15 19:51:22]  [INFO   ]    race: mode → Caucasian
+[2026-08-15 19:51:22]  [INFO   ]    weight: mode → [75-100)
+[2026-08-15 19:51:22]  [INFO   ]    payer_code: mode → MC
+[2026-08-15 19:51:22]  [INFO   ]    medical_specialty: mode → InternalMedicine
+[2026-08-15 19:51:22]  [INFO   ]    diag_1: mode → 428
+[2026-08-15 19:51:22]  [INFO   ]    diag_2: mode → 276
+[2026-08-15 19:51:22]  [INFO   ]    diag_3: mode → 250
+[2026-08-15 19:51:22]  [INFO   ]    max_glu_serum: mode → Norm
+[2026-08-15 19:51:22]  [INFO   ]    A1Cresult: mode → >8
+[2026-08-15 19:51:23]  [INFO   ]  
+======================================================================
+  PART D — DATA TYPE CORRECTIONS
+======================================================================
+[2026-08-15 19:51:23]  [INFO   ]    Converted — race: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — gender: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — age: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — admission_type_id: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — discharge_disposition_id: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — admission_source_id: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — payer_code: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — medical_specialty: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — diag_1: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — diag_2: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — diag_3: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — max_glu_serum: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — A1Cresult: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — metformin: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — repaglinide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — nateglinide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — chlorpropamide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — glimepiride: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — acetohexamide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — glipizide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — glyburide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — tolbutamide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — pioglitazone: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — rosiglitazone: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — acarbose: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — miglitol: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — troglitazone: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — tolazamide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — examide: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — citoglipton: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — insulin: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — glyburide-metformin: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — glipizide-metformin: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — glimepiride-pioglitazone: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — metformin-rosiglitazone: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — metformin-pioglitazone: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — change: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]    Converted — diabetesMed: numeric → object (categorical)
+[2026-08-15 19:51:23]  [INFO   ]  
+======================================================================
+  PART E — DUPLICATE REMOVAL
+======================================================================
+[2026-08-15 19:51:23]  [INFO   ]  Duplicate rows found: 0
+[2026-08-15 19:51:24]  [INFO   ]  
+======================================================================
+  PART F — OUTLIER DETECTION
+======================================================================
+[2026-08-15 19:51:24]  [INFO   ]    time_in_hospital: 2252 outliers → capped [1.000, 14.000]
+[2026-08-15 19:51:24]  [INFO   ]    num_lab_procedures: 143 outliers → capped [1.000, 85.000]
+[2026-08-15 19:51:24]  [INFO   ]    num_procedures: 4954 outliers → capped [0.000, 6.000]
+[2026-08-15 19:51:24]  [INFO   ]    num_medications: 2557 outliers → capped [3.000, 43.000]
+[2026-08-15 19:51:24]  [INFO   ]    number_outpatient: 16739 outliers → capped [0.000, 5.000]
+[2026-08-15 19:51:24]  [INFO   ]    number_emergency: 11383 outliers → capped [0.000, 3.000]
+[2026-08-15 19:51:24]  [INFO   ]    number_inpatient: 7049 outliers → capped [0.000, 6.000]
+[2026-08-15 19:51:24]  [INFO   ]    number_diagnoses: 281 outliers → capped [2.000, 9.000]
+[2026-08-15 19:51:26]  [INFO   ]  
+======================================================================
+  PART G — CATEGORICAL ENCODING
+======================================================================
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  acetohexamide: {'No': 0, 'Steady': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  tolbutamide: {'No': 0, 'Steady': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  troglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  examide: {'No': 0}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  citoglipton: {'No': 0}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  glipizide-metformin: {'No': 0, 'Steady': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  glimepiride-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  metformin-rosiglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  metformin-pioglitazone: {'No': 0, 'Steady': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  change: {'Ch': 0, 'No': 1}
+[2026-08-15 19:51:26]  [INFO   ]    LabelEncoded  diabetesMed: {'No': 0, 'Yes': 1}
+[2026-08-15 19:51:27]  [INFO   ]    One-Hot Encoded: ['race', 'gender', 'age', 'weight', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'payer_code', 'medical_specialty', 'diag_1', 'diag_2', 'diag_3', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'glipizide', 'glyburide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'tolazamide', 'insulin', 'glyburide-metformin']
+[2026-08-15 19:51:58]  [INFO   ]  
+======================================================================
+  PART H — PREPROCESSING REPORT
+======================================================================
+[2026-08-15 19:51:59]  [INFO   ]  Preprocessing summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\preprocessing_summary.txt
+[2026-08-15 19:51:59]  [INFO   ]  
+======================================================================
+  PART I — VISUALIZATIONS
+======================================================================
+[2026-08-15 19:51:59]  [INFO   ]  No missing values — skipping heatmap.
+[2026-08-15 19:52:01]  [INFO   ]  Saved 4 visualizations to D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda
+[2026-08-15 19:52:01]  [INFO   ]  Pipeline complete: 2026-08-15 19:52:01

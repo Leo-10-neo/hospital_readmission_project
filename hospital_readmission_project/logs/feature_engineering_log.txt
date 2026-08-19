@@ -1,0 +1,444 @@
+[2026-05-08 11:34:36]  [INFO   ]  =================================================================
+[2026-05-08 11:34:36]  [INFO   ]  Feature engineering started: 2026-05-08 11:34:36
+[2026-05-08 11:34:36]  [INFO   ]  Loaded: (101766, 48)
+[2026-05-08 11:34:36]  [INFO   ]  
+======================================================================
+  SECTION A - DIAGNOSTIC FEATURES
+======================================================================
+[2026-05-08 11:34:49]  [INFO   ]  Section A done.
+[2026-05-08 11:34:49]  [INFO   ]  
+======================================================================
+  SECTION B - COMORBIDITY FEATURES
+======================================================================
+[2026-05-08 11:35:24]  [INFO   ]  Section B done.
+[2026-05-08 11:35:24]  [INFO   ]  
+======================================================================
+  SECTION C - MEDICATION FEATURES
+======================================================================
+[2026-05-08 11:35:24]  [INFO   ]  Section C done.
+[2026-05-08 11:35:24]  [INFO   ]  
+======================================================================
+  SECTION D - PROCEDURE FEATURES
+======================================================================
+[2026-05-08 11:35:24]  [INFO   ]  Section D done.
+[2026-05-08 11:35:24]  [INFO   ]  
+======================================================================
+  SECTION E - HOSPITAL STAY FEATURES
+======================================================================
+[2026-05-08 11:35:24]  [INFO   ]  Section E done.
+[2026-05-08 11:35:24]  [INFO   ]  
+======================================================================
+  SECTION F - ADMISSION FEATURES
+======================================================================
+[2026-05-08 11:35:24]  [INFO   ]  Section F done.
+[2026-05-08 11:35:24]  [INFO   ]  
+======================================================================
+  SECTION G - AGE & DEMOGRAPHIC FEATURES
+======================================================================
+[2026-05-08 11:35:24]  [INFO   ]  Section G done.
+[2026-05-08 11:35:24]  [INFO   ]  
+======================================================================
+  SECTION H - LAB FEATURES
+======================================================================
+[2026-05-08 11:35:27]  [INFO   ]  Section H done.
+[2026-05-08 11:35:27]  [INFO   ]  
+======================================================================
+  SECTION I - DISCHARGE FEATURES
+======================================================================
+[2026-05-08 11:35:27]  [INFO   ]  Section I done.
+[2026-05-08 11:35:27]  [INFO   ]  
+======================================================================
+  SECTION J - INTERACTION FEATURES
+======================================================================
+[2026-05-08 11:35:27]  [INFO   ]  Section J done.
+[2026-05-08 11:35:27]  [INFO   ]  
+======================================================================
+  SECTION K - VALIDATION
+======================================================================
+[2026-05-08 11:35:27]  [INFO   ]  Validation table:
+                         feature    dtype  missing_pct  unique_values       mean       std  corr_target
+0          total_diagnoses_count    int64          0.0              4     2.9823    0.1514      -0.0347
+1          has_primary_diagnosis    int64          0.0              2     0.9998    0.0144       0.0020
+2            diagnosis_diversity    int64          0.0              4     2.9274    0.2738      -0.0266
+3         chronic_diagnosis_flag    int64          0.0              2     0.8695    0.3368      -0.0138
+4                   has_diabetes    int64          0.0              2     0.3736    0.4838       0.0113
+5              has_heart_disease    int64          0.0              2     0.5217    0.4995      -0.0148
+6        has_respiratory_disease    int64          0.0              2     0.2212    0.4151      -0.0266
+7             has_kidney_disease    int64          0.0              2     0.1701    0.3757      -0.0248
+8          chronic_disease_count    int64          0.0              4     1.2867    0.7344      -0.0303
+9              comorbidity_index    int64          0.0              6     1.9785    1.1996      -0.0324
+10             total_medications    int64          0.0             41    15.9535    7.7795      -0.0554
+11   medication_complexity_score  float64          0.0              3     2.6961    0.5578      -0.0791
+12                 insulin_usage    int64          0.0              2     0.5344    0.4988      -0.0479
+13             diabetic_med_flag    int64          0.0              2     0.7700    0.4208      -0.0573
+14        medication_change_flag    int64          0.0              2     0.4620    0.4986      -0.0425
+15              total_procedures    int64          0.0              7     1.3397    1.7058       0.0382
+16    procedure_complexity_score  float64          0.0              4     0.8030    0.8823       0.0369
+17                   has_surgery    int64          0.0              2     0.5416    0.4983       0.0282
+18       procedure_to_stay_ratio  float64          0.0             56     0.4527    0.8724       0.0636
+19        hospital_stay_category  float64          0.0              3     0.6669    0.7229      -0.0601
+20        length_of_stay_squared    int64          0.0             14    28.2355   38.0198      -0.0436
+21            length_of_stay_log  float64          0.0             14     1.5430    0.5342      -0.0671
+22      average_daily_procedures  float64          0.0             56     0.4527    0.8724       0.0636
+23     time_in_hospital_category  float64          0.0              3     0.6669    0.7229      -0.0601
+24      readmission_history_flag    int64          0.0              2     0.3354    0.4721      -0.2123
+25      emergency_admission_flag    int64          0.0              2     0.1119    0.3152      -0.1186
+26     admission_type_risk_score  float64          0.0              3     2.2427    0.8715      -0.0279
+27         admission_source_risk    int64          0.0              3     2.4313    0.7160      -0.0654
+28     days_since_last_admission    int64          0.0              2    10.0631   14.1644      -0.2123
+29                age_risk_group  float64          0.0              4     1.8082    0.8194      -0.0296
+30                  elderly_flag    int64          0.0              2     0.4526    0.4977      -0.0304
+31             very_elderly_flag    int64          0.0              2     0.1964    0.3973      -0.0131
+32    age_medication_interaction  float64          0.0            267  1057.9048  574.3109      -0.0561
+33   age_comorbidity_interaction  float64          0.0             28    85.6140   54.9668      -0.0367
+34            lab_test_frequency    int64          0.0             85    43.0368   19.5307      -0.0385
+35        glucose_level_category  float64          0.0              4     0.0920    0.4327      -0.0188
+36           A1C_result_category  float64          0.0              4     0.3662    0.8896       0.0172
+37            abnormal_lab_count    int64          0.0              3     0.1452    0.3573       0.0035
+38        discharge_to_home_flag    int64          0.0              2     0.5919    0.4915       0.0515
+39  discharge_with_services_flag    int64          0.0              2     0.1268    0.3327      -0.0540
+40            ama_discharge_flag    int64          0.0              2     0.0061    0.0780      -0.0082
+41    discharge_disposition_risk    int64          0.0              3     1.2878    0.4661      -0.0779
+42               age_length_stay  float64          0.0            104   295.1062  221.6293      -0.0533
+43     diabetes_medication_combo    int64          0.0              2     0.2996    0.4581      -0.0021
+44        procedures_medications    int64          0.0            143    26.4246   42.6896       0.0221
+45               comorbidity_age  float64          0.0             12     3.7091    2.9895      -0.0371
+46             emergency_elderly    int64          0.0              2     0.0448    0.2070      -0.0564
+[2026-05-08 11:35:27]  [INFO   ]  Feature report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\feature_engineering_report.csv
+[2026-05-08 11:35:28]  [INFO   ]  Visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\engineered_features.png
+[2026-05-08 11:35:30]  [INFO   ]  featured_data.csv saved -> D:\hospital_readmission_project\hospital_readmission_project\data\processed\featured_data.csv
+[2026-05-08 11:35:30]  [INFO   ]  New features: ['total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'total_medications', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'procedure_to_stay_ratio', 'hospital_stay_category', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'age_length_stay', 'diabetes_medication_combo', 'procedures_medications', 'comorbidity_age', 'emergency_elderly']
+[2026-05-08 11:35:30]  [INFO   ]  Feature engineering complete: 2026-05-08 11:35:30
+[2026-05-08 12:51:38]  [INFO   ]  =================================================================
+[2026-05-08 12:51:38]  [INFO   ]  Feature engineering started: 2026-05-08 12:51:38
+[2026-05-08 12:51:39]  [INFO   ]  Loaded: (101766, 48)
+[2026-05-08 12:51:39]  [INFO   ]  
+======================================================================
+  SECTION A - DIAGNOSTIC FEATURES
+======================================================================
+[2026-05-08 12:51:50]  [INFO   ]  Section A done.
+[2026-05-08 12:51:50]  [INFO   ]  
+======================================================================
+  SECTION B - COMORBIDITY FEATURES
+======================================================================
+[2026-05-08 12:52:22]  [INFO   ]  Section B done.
+[2026-05-08 12:52:22]  [INFO   ]  
+======================================================================
+  SECTION C - MEDICATION FEATURES
+======================================================================
+[2026-05-08 12:52:22]  [INFO   ]  Section C done.
+[2026-05-08 12:52:22]  [INFO   ]  
+======================================================================
+  SECTION D - PROCEDURE FEATURES
+======================================================================
+[2026-05-08 12:52:22]  [INFO   ]  Section D done.
+[2026-05-08 12:52:22]  [INFO   ]  
+======================================================================
+  SECTION E - HOSPITAL STAY FEATURES
+======================================================================
+[2026-05-08 12:52:22]  [INFO   ]  Section E done.
+[2026-05-08 12:52:22]  [INFO   ]  
+======================================================================
+  SECTION F - ADMISSION FEATURES
+======================================================================
+[2026-05-08 12:52:22]  [INFO   ]  Section F done.
+[2026-05-08 12:52:22]  [INFO   ]  
+======================================================================
+  SECTION G - AGE & DEMOGRAPHIC FEATURES
+======================================================================
+[2026-05-08 12:52:22]  [INFO   ]  Section G done.
+[2026-05-08 12:52:22]  [INFO   ]  
+======================================================================
+  SECTION H - LAB FEATURES
+======================================================================
+[2026-05-08 12:52:25]  [INFO   ]  Section H done.
+[2026-05-08 12:52:25]  [INFO   ]  
+======================================================================
+  SECTION I - DISCHARGE FEATURES
+======================================================================
+[2026-05-08 12:52:25]  [INFO   ]  Section I done.
+[2026-05-08 12:52:25]  [INFO   ]  
+======================================================================
+  SECTION J - INTERACTION FEATURES
+======================================================================
+[2026-05-08 12:52:25]  [INFO   ]  Section J done.
+[2026-05-08 12:52:25]  [INFO   ]  
+======================================================================
+  SECTION K - VALIDATION
+======================================================================
+[2026-05-08 12:52:25]  [INFO   ]  Validation table:
+                         feature    dtype  missing_pct  unique_values       mean       std  corr_target
+0          total_diagnoses_count    int64          0.0              4     2.9823    0.1514      -0.0347
+1          has_primary_diagnosis    int64          0.0              2     0.9998    0.0144       0.0020
+2            diagnosis_diversity    int64          0.0              4     2.9274    0.2738      -0.0266
+3         chronic_diagnosis_flag    int64          0.0              2     0.8695    0.3368      -0.0138
+4                   has_diabetes    int64          0.0              2     0.3736    0.4838       0.0113
+5              has_heart_disease    int64          0.0              2     0.5217    0.4995      -0.0148
+6        has_respiratory_disease    int64          0.0              2     0.2212    0.4151      -0.0266
+7             has_kidney_disease    int64          0.0              2     0.1701    0.3757      -0.0248
+8          chronic_disease_count    int64          0.0              4     1.2867    0.7344      -0.0303
+9              comorbidity_index    int64          0.0              6     1.9785    1.1996      -0.0324
+10             total_medications    int64          0.0             41    15.9535    7.7795      -0.0554
+11   medication_complexity_score  float64          0.0              3     2.6961    0.5578      -0.0791
+12                 insulin_usage    int64          0.0              2     0.5344    0.4988      -0.0479
+13             diabetic_med_flag    int64          0.0              2     0.7700    0.4208      -0.0573
+14        medication_change_flag    int64          0.0              2     0.4620    0.4986      -0.0425
+15              total_procedures    int64          0.0              7     1.3397    1.7058       0.0382
+16    procedure_complexity_score  float64          0.0              4     0.8030    0.8823       0.0369
+17                   has_surgery    int64          0.0              2     0.5416    0.4983       0.0282
+18       procedure_to_stay_ratio  float64          0.0             56     0.4527    0.8724       0.0636
+19        hospital_stay_category  float64          0.0              3     0.6669    0.7229      -0.0601
+20        length_of_stay_squared    int64          0.0             14    28.2355   38.0198      -0.0436
+21            length_of_stay_log  float64          0.0             14     1.5430    0.5342      -0.0671
+22      average_daily_procedures  float64          0.0             56     0.4527    0.8724       0.0636
+23     time_in_hospital_category  float64          0.0              3     0.6669    0.7229      -0.0601
+24      readmission_history_flag    int64          0.0              2     0.3354    0.4721      -0.2123
+25      emergency_admission_flag    int64          0.0              2     0.1119    0.3152      -0.1186
+26     admission_type_risk_score  float64          0.0              3     2.2427    0.8715      -0.0279
+27         admission_source_risk    int64          0.0              3     2.4313    0.7160      -0.0654
+28     days_since_last_admission    int64          0.0              2    10.0631   14.1644      -0.2123
+29                age_risk_group  float64          0.0              4     1.8082    0.8194      -0.0296
+30                  elderly_flag    int64          0.0              2     0.4526    0.4977      -0.0304
+31             very_elderly_flag    int64          0.0              2     0.1964    0.3973      -0.0131
+32    age_medication_interaction  float64          0.0            267  1057.9048  574.3109      -0.0561
+33   age_comorbidity_interaction  float64          0.0             28    85.6140   54.9668      -0.0367
+34            lab_test_frequency    int64          0.0             85    43.0368   19.5307      -0.0385
+35        glucose_level_category  float64          0.0              4     0.0920    0.4327      -0.0188
+36           A1C_result_category  float64          0.0              4     0.3662    0.8896       0.0172
+37            abnormal_lab_count    int64          0.0              3     0.1452    0.3573       0.0035
+38        discharge_to_home_flag    int64          0.0              2     0.5919    0.4915       0.0515
+39  discharge_with_services_flag    int64          0.0              2     0.1268    0.3327      -0.0540
+40            ama_discharge_flag    int64          0.0              2     0.0061    0.0780      -0.0082
+41    discharge_disposition_risk    int64          0.0              3     1.2878    0.4661      -0.0779
+42               age_length_stay  float64          0.0            104   295.1062  221.6293      -0.0533
+43     diabetes_medication_combo    int64          0.0              2     0.2996    0.4581      -0.0021
+44        procedures_medications    int64          0.0            143    26.4246   42.6896       0.0221
+45               comorbidity_age  float64          0.0             12     3.7091    2.9895      -0.0371
+46             emergency_elderly    int64          0.0              2     0.0448    0.2070      -0.0564
+[2026-05-08 12:52:25]  [INFO   ]  Feature report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\feature_engineering_report.csv
+[2026-05-08 12:52:26]  [INFO   ]  Visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\engineered_features.png
+[2026-05-08 12:52:28]  [INFO   ]  featured_data.csv saved -> D:\hospital_readmission_project\hospital_readmission_project\data\processed\featured_data.csv
+[2026-05-08 12:52:28]  [INFO   ]  New features: ['total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'total_medications', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'procedure_to_stay_ratio', 'hospital_stay_category', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'age_length_stay', 'diabetes_medication_combo', 'procedures_medications', 'comorbidity_age', 'emergency_elderly']
+[2026-05-08 12:52:28]  [INFO   ]  Feature engineering complete: 2026-05-08 12:52:28
+[2026-05-08 12:55:22]  [INFO   ]  =================================================================
+[2026-05-08 12:55:22]  [INFO   ]  Feature engineering started: 2026-05-08 12:55:22
+[2026-05-08 12:55:22]  [INFO   ]  Loaded: (101766, 48)
+[2026-05-08 12:55:22]  [INFO   ]  
+======================================================================
+  SECTION A - DIAGNOSTIC FEATURES
+======================================================================
+[2026-05-08 12:55:34]  [INFO   ]  Section A done.
+[2026-05-08 12:55:34]  [INFO   ]  
+======================================================================
+  SECTION B - COMORBIDITY FEATURES
+======================================================================
+[2026-05-08 12:56:05]  [INFO   ]  Section B done.
+[2026-05-08 12:56:05]  [INFO   ]  
+======================================================================
+  SECTION C - MEDICATION FEATURES
+======================================================================
+[2026-05-08 12:56:05]  [INFO   ]  Section C done.
+[2026-05-08 12:56:05]  [INFO   ]  
+======================================================================
+  SECTION D - PROCEDURE FEATURES
+======================================================================
+[2026-05-08 12:56:05]  [INFO   ]  Section D done.
+[2026-05-08 12:56:05]  [INFO   ]  
+======================================================================
+  SECTION E - HOSPITAL STAY FEATURES
+======================================================================
+[2026-05-08 12:56:05]  [INFO   ]  Section E done.
+[2026-05-08 12:56:05]  [INFO   ]  
+======================================================================
+  SECTION F - ADMISSION FEATURES
+======================================================================
+[2026-05-08 12:56:05]  [INFO   ]  Section F done.
+[2026-05-08 12:56:05]  [INFO   ]  
+======================================================================
+  SECTION G - AGE & DEMOGRAPHIC FEATURES
+======================================================================
+[2026-05-08 12:56:05]  [INFO   ]  Section G done.
+[2026-05-08 12:56:05]  [INFO   ]  
+======================================================================
+  SECTION H - LAB FEATURES
+======================================================================
+[2026-05-08 12:56:08]  [INFO   ]  Section H done.
+[2026-05-08 12:56:08]  [INFO   ]  
+======================================================================
+  SECTION I - DISCHARGE FEATURES
+======================================================================
+[2026-05-08 12:56:08]  [INFO   ]  Section I done.
+[2026-05-08 12:56:08]  [INFO   ]  
+======================================================================
+  SECTION J - INTERACTION FEATURES
+======================================================================
+[2026-05-08 12:56:08]  [INFO   ]  Section J done.
+[2026-05-08 12:56:08]  [INFO   ]  
+======================================================================
+  SECTION K - VALIDATION
+======================================================================
+[2026-05-08 12:56:08]  [INFO   ]  Validation table:
+                         feature    dtype  missing_pct  unique_values       mean       std  corr_target
+0          total_diagnoses_count    int64          0.0              4     2.9823    0.1514      -0.0347
+1          has_primary_diagnosis    int64          0.0              2     0.9998    0.0144       0.0020
+2            diagnosis_diversity    int64          0.0              4     2.9274    0.2738      -0.0266
+3         chronic_diagnosis_flag    int64          0.0              2     0.8695    0.3368      -0.0138
+4                   has_diabetes    int64          0.0              2     0.3736    0.4838       0.0113
+5              has_heart_disease    int64          0.0              2     0.5217    0.4995      -0.0148
+6        has_respiratory_disease    int64          0.0              2     0.2212    0.4151      -0.0266
+7             has_kidney_disease    int64          0.0              2     0.1701    0.3757      -0.0248
+8          chronic_disease_count    int64          0.0              4     1.2867    0.7344      -0.0303
+9              comorbidity_index    int64          0.0              6     1.9785    1.1996      -0.0324
+10             total_medications    int64          0.0             41    15.9535    7.7795      -0.0554
+11   medication_complexity_score  float64          0.0              3     2.6961    0.5578      -0.0791
+12                 insulin_usage    int64          0.0              2     0.5344    0.4988      -0.0479
+13             diabetic_med_flag    int64          0.0              2     0.7700    0.4208      -0.0573
+14        medication_change_flag    int64          0.0              2     0.4620    0.4986      -0.0425
+15              total_procedures    int64          0.0              7     1.3397    1.7058       0.0382
+16    procedure_complexity_score  float64          0.0              4     0.8030    0.8823       0.0369
+17                   has_surgery    int64          0.0              2     0.5416    0.4983       0.0282
+18       procedure_to_stay_ratio  float64          0.0             56     0.4527    0.8724       0.0636
+19        hospital_stay_category  float64          0.0              3     0.6669    0.7229      -0.0601
+20        length_of_stay_squared    int64          0.0             14    28.2355   38.0198      -0.0436
+21            length_of_stay_log  float64          0.0             14     1.5430    0.5342      -0.0671
+22      average_daily_procedures  float64          0.0             56     0.4527    0.8724       0.0636
+23     time_in_hospital_category  float64          0.0              3     0.6669    0.7229      -0.0601
+24      readmission_history_flag    int64          0.0              2     0.3354    0.4721      -0.2123
+25      emergency_admission_flag    int64          0.0              2     0.1119    0.3152      -0.1186
+26     admission_type_risk_score  float64          0.0              3     2.2427    0.8715      -0.0279
+27         admission_source_risk    int64          0.0              3     2.4313    0.7160      -0.0654
+28     days_since_last_admission    int64          0.0              2    10.0631   14.1644      -0.2123
+29                age_risk_group  float64          0.0              4     1.8082    0.8194      -0.0296
+30                  elderly_flag    int64          0.0              2     0.4526    0.4977      -0.0304
+31             very_elderly_flag    int64          0.0              2     0.1964    0.3973      -0.0131
+32    age_medication_interaction  float64          0.0            267  1057.9048  574.3109      -0.0561
+33   age_comorbidity_interaction  float64          0.0             28    85.6140   54.9668      -0.0367
+34            lab_test_frequency    int64          0.0             85    43.0368   19.5307      -0.0385
+35        glucose_level_category  float64          0.0              4     0.0920    0.4327      -0.0188
+36           A1C_result_category  float64          0.0              4     0.3662    0.8896       0.0172
+37            abnormal_lab_count    int64          0.0              3     0.1452    0.3573       0.0035
+38        discharge_to_home_flag    int64          0.0              2     0.5919    0.4915       0.0515
+39  discharge_with_services_flag    int64          0.0              2     0.1268    0.3327      -0.0540
+40            ama_discharge_flag    int64          0.0              2     0.0061    0.0780      -0.0082
+41    discharge_disposition_risk    int64          0.0              3     1.2878    0.4661      -0.0779
+42               age_length_stay  float64          0.0            104   295.1062  221.6293      -0.0533
+43     diabetes_medication_combo    int64          0.0              2     0.2996    0.4581      -0.0021
+44        procedures_medications    int64          0.0            143    26.4246   42.6896       0.0221
+45               comorbidity_age  float64          0.0             12     3.7091    2.9895      -0.0371
+46             emergency_elderly    int64          0.0              2     0.0448    0.2070      -0.0564
+[2026-05-08 12:56:08]  [INFO   ]  Feature report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\feature_engineering_report.csv
+[2026-05-08 12:56:09]  [INFO   ]  Visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\engineered_features.png
+[2026-05-08 12:56:11]  [INFO   ]  featured_data.csv saved -> D:\hospital_readmission_project\hospital_readmission_project\data\processed\featured_data.csv
+[2026-05-08 12:56:11]  [INFO   ]  New features: ['total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'total_medications', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'procedure_to_stay_ratio', 'hospital_stay_category', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'age_length_stay', 'diabetes_medication_combo', 'procedures_medications', 'comorbidity_age', 'emergency_elderly']
+[2026-05-08 12:56:11]  [INFO   ]  Feature engineering complete: 2026-05-08 12:56:11
+[2026-08-15 19:52:19]  [INFO   ]  =================================================================
+[2026-08-15 19:52:19]  [INFO   ]  Feature engineering started: 2026-08-15 19:52:19
+[2026-08-15 19:52:19]  [INFO   ]  Loaded: (101766, 48)
+[2026-08-15 19:52:19]  [INFO   ]  
+======================================================================
+  SECTION A - DIAGNOSTIC FEATURES
+======================================================================
+[2026-08-15 19:52:31]  [INFO   ]  Section A done.
+[2026-08-15 19:52:31]  [INFO   ]  
+======================================================================
+  SECTION B - COMORBIDITY FEATURES
+======================================================================
+[2026-08-15 19:53:05]  [INFO   ]  Section B done.
+[2026-08-15 19:53:05]  [INFO   ]  
+======================================================================
+  SECTION C - MEDICATION FEATURES
+======================================================================
+[2026-08-15 19:53:05]  [INFO   ]  Section C done.
+[2026-08-15 19:53:05]  [INFO   ]  
+======================================================================
+  SECTION D - PROCEDURE FEATURES
+======================================================================
+[2026-08-15 19:53:05]  [INFO   ]  Section D done.
+[2026-08-15 19:53:05]  [INFO   ]  
+======================================================================
+  SECTION E - HOSPITAL STAY FEATURES
+======================================================================
+[2026-08-15 19:53:05]  [INFO   ]  Section E done.
+[2026-08-15 19:53:05]  [INFO   ]  
+======================================================================
+  SECTION F - ADMISSION FEATURES
+======================================================================
+[2026-08-15 19:53:06]  [INFO   ]  Section F done.
+[2026-08-15 19:53:06]  [INFO   ]  
+======================================================================
+  SECTION G - AGE & DEMOGRAPHIC FEATURES
+======================================================================
+[2026-08-15 19:53:06]  [INFO   ]  Section G done.
+[2026-08-15 19:53:06]  [INFO   ]  
+======================================================================
+  SECTION H - LAB FEATURES
+======================================================================
+[2026-08-15 19:53:09]  [INFO   ]  Section H done.
+[2026-08-15 19:53:09]  [INFO   ]  
+======================================================================
+  SECTION I - DISCHARGE FEATURES
+======================================================================
+[2026-08-15 19:53:09]  [INFO   ]  Section I done.
+[2026-08-15 19:53:09]  [INFO   ]  
+======================================================================
+  SECTION J - INTERACTION FEATURES
+======================================================================
+[2026-08-15 19:53:09]  [INFO   ]  Section J done.
+[2026-08-15 19:53:09]  [INFO   ]  
+======================================================================
+  SECTION K - VALIDATION
+======================================================================
+[2026-08-15 19:53:09]  [INFO   ]  Validation table:
+                         feature    dtype  missing_pct  unique_values       mean       std  corr_target
+0          total_diagnoses_count    int64          0.0              4     2.9823    0.1514      -0.0347
+1          has_primary_diagnosis    int64          0.0              2     0.9998    0.0144       0.0020
+2            diagnosis_diversity    int64          0.0              4     2.9274    0.2738      -0.0266
+3         chronic_diagnosis_flag    int64          0.0              2     0.8695    0.3368      -0.0138
+4                   has_diabetes    int64          0.0              2     0.3736    0.4838       0.0113
+5              has_heart_disease    int64          0.0              2     0.5217    0.4995      -0.0148
+6        has_respiratory_disease    int64          0.0              2     0.2212    0.4151      -0.0266
+7             has_kidney_disease    int64          0.0              2     0.1701    0.3757      -0.0248
+8          chronic_disease_count    int64          0.0              4     1.2867    0.7344      -0.0303
+9              comorbidity_index    int64          0.0              6     1.9785    1.1996      -0.0324
+10             total_medications    int64          0.0             41    15.9535    7.7795      -0.0554
+11   medication_complexity_score  float64          0.0              3     2.6961    0.5578      -0.0791
+12                 insulin_usage    int64          0.0              2     0.5344    0.4988      -0.0479
+13             diabetic_med_flag    int64          0.0              2     0.7700    0.4208      -0.0573
+14        medication_change_flag    int64          0.0              2     0.4620    0.4986      -0.0425
+15              total_procedures    int64          0.0              7     1.3397    1.7058       0.0382
+16    procedure_complexity_score  float64          0.0              4     0.8030    0.8823       0.0369
+17                   has_surgery    int64          0.0              2     0.5416    0.4983       0.0282
+18       procedure_to_stay_ratio  float64          0.0             56     0.4527    0.8724       0.0636
+19        hospital_stay_category  float64          0.0              3     0.6669    0.7229      -0.0601
+20        length_of_stay_squared    int64          0.0             14    28.2355   38.0198      -0.0436
+21            length_of_stay_log  float64          0.0             14     1.5430    0.5342      -0.0671
+22      average_daily_procedures  float64          0.0             56     0.4527    0.8724       0.0636
+23     time_in_hospital_category  float64          0.0              3     0.6669    0.7229      -0.0601
+24      readmission_history_flag    int64          0.0              2     0.3354    0.4721      -0.2123
+25      emergency_admission_flag    int64          0.0              2     0.1119    0.3152      -0.1186
+26     admission_type_risk_score  float64          0.0              3     2.2427    0.8715      -0.0279
+27         admission_source_risk    int64          0.0              3     2.4313    0.7160      -0.0654
+28     days_since_last_admission    int64          0.0              2    10.0631   14.1644      -0.2123
+29                age_risk_group  float64          0.0              4     1.8082    0.8194      -0.0296
+30                  elderly_flag    int64          0.0              2     0.4526    0.4977      -0.0304
+31             very_elderly_flag    int64          0.0              2     0.1964    0.3973      -0.0131
+32    age_medication_interaction  float64          0.0            267  1057.9048  574.3109      -0.0561
+33   age_comorbidity_interaction  float64          0.0             28    85.6140   54.9668      -0.0367
+34            lab_test_frequency    int64          0.0             85    43.0368   19.5307      -0.0385
+35        glucose_level_category  float64          0.0              4     0.0920    0.4327      -0.0188
+36           A1C_result_category  float64          0.0              4     0.3662    0.8896       0.0172
+37            abnormal_lab_count    int64          0.0              3     0.1452    0.3573       0.0035
+38        discharge_to_home_flag    int64          0.0              2     0.5919    0.4915       0.0515
+39  discharge_with_services_flag    int64          0.0              2     0.1268    0.3327      -0.0540
+40            ama_discharge_flag    int64          0.0              2     0.0061    0.0780      -0.0082
+41    discharge_disposition_risk    int64          0.0              3     1.2878    0.4661      -0.0779
+42               age_length_stay  float64          0.0            104   295.1062  221.6293      -0.0533
+43     diabetes_medication_combo    int64          0.0              2     0.2996    0.4581      -0.0021
+44        procedures_medications    int64          0.0            143    26.4246   42.6896       0.0221
+45               comorbidity_age  float64          0.0             12     3.7091    2.9895      -0.0371
+46             emergency_elderly    int64          0.0              2     0.0448    0.2070      -0.0564
+[2026-08-15 19:53:09]  [INFO   ]  Feature report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\feature_engineering_report.csv
+[2026-08-15 19:53:11]  [INFO   ]  Visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\engineered_features.png
+[2026-08-15 19:53:13]  [INFO   ]  featured_data.csv saved -> D:\hospital_readmission_project\hospital_readmission_project\data\processed\featured_data.csv
+[2026-08-15 19:53:13]  [INFO   ]  New features: ['total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'total_medications', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'procedure_to_stay_ratio', 'hospital_stay_category', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'age_length_stay', 'diabetes_medication_combo', 'procedures_medications', 'comorbidity_age', 'emergency_elderly']
+[2026-08-15 19:53:13]  [INFO   ]  Feature engineering complete: 2026-08-15 19:53:13

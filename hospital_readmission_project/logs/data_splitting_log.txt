@@ -1,0 +1,220 @@
+[2026-05-08 11:51:24]  [INFO   ]  Data splitting started: 2026-05-08 11:51:24
+[2026-05-08 11:51:26]  [INFO   ]  Loaded featured_data: (101766, 96)
+[2026-05-08 11:51:26]  [INFO   ]  After encode: (101766, 90)
+[2026-05-08 11:51:27]  [INFO   ]  Train (71236, 89) | Val (15265, 89) | Test (15265, 89)
+[2026-05-08 11:51:27]  [INFO   ]  
+======================================================================
+  SECTION D – VISUALIZATIONS
+======================================================================
+[2026-05-08 11:51:27]  [INFO   ]  Split visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\data_splits_visualization.png
+[2026-05-08 11:51:27]  [INFO   ]  Split summary:
+        split  n_samples  pct_total  n_readmitted  n_not_readmitted  readmission_rate
+0       Train      71236       70.0          7950             63286             11.16
+1  Validation      15265       15.0          1704             13561             11.16
+2        Test      15265       15.0          1703             13562             11.16
+[2026-05-08 11:51:27]  [INFO   ]  
+======================================================================
+  SECTION E – FEATURE TYPES
+======================================================================
+[2026-05-08 11:51:27]  [INFO   ]  Numerical (14): ['time_in_hospital', 'num_lab_procedures', 'num_medications', 'total_medications', 'procedure_to_stay_ratio', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'age_length_stay', 'procedures_medications', 'comorbidity_age']
+[2026-05-08 11:51:27]  [INFO   ]  Categorical (75): ['race', 'gender', 'age', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'num_procedures', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'acetohexamide', 'glipizide', 'glyburide', 'tolbutamide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone', 'tolazamide', 'examide', 'citoglipton', 'insulin', 'glyburide-metformin', 'glipizide-metformin', 'glimepiride-pioglitazone', 'metformin-rosiglitazone', 'metformin-pioglitazone', 'change', 'diabetesMed', 'total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'hospital_stay_category', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_midpoint', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'diabetes_medication_combo', 'emergency_elderly']
+[2026-05-08 11:51:27]  [INFO   ]  
+======================================================================
+  SECTION F – SCALING
+======================================================================
+[2026-05-08 11:51:28]  [INFO   ]  Scaler fit on 14 numerical features, saved -> D:\hospital_readmission_project\hospital_readmission_project\models\scaler.pkl
+[2026-05-08 11:51:28]  [INFO   ]  Mean after scaling (sample): {'time_in_hospital': 0.0, 'num_lab_procedures': -0.0, 'num_medications': -0.0, 'total_medications': -0.0, 'procedure_to_stay_ratio': 0.0}
+[2026-05-08 11:51:28]  [INFO   ]  
+======================================================================
+  SECTION G – SAVE SPLITS
+======================================================================
+[2026-05-08 11:51:31]  [INFO   ]  Saved X_train -> CSV + PKL
+[2026-05-08 11:51:31]  [INFO   ]  Saved y_train -> CSV + PKL
+[2026-05-08 11:51:32]  [INFO   ]  Saved X_val -> CSV + PKL
+[2026-05-08 11:51:32]  [INFO   ]  Saved y_val -> CSV + PKL
+[2026-05-08 11:51:33]  [INFO   ]  Saved X_test -> CSV + PKL
+[2026-05-08 11:51:33]  [INFO   ]  Saved y_test -> CSV + PKL
+[2026-05-08 11:51:33]  [INFO   ]  
+======================================================================
+  SECTION H – LEAKAGE CHECK
+======================================================================
+[2026-05-08 11:51:33]  [INFO   ]  No index overlap between splits: PASS (train-val=0, train-test=0, val-test=0)
+[2026-05-08 11:51:33]  [INFO   ]  Scaler fitted on training data only (14 features): PASS
+[2026-05-08 11:51:33]  [INFO   ]  Stratification maintained (pos rates: train=0.1116, val=0.1116, test=0.1116): PASS
+[2026-05-08 11:51:33]  [INFO   ]  Leakage check complete: [('Index overlap check', 'PASS'), ('Scaler fit on train only', 'PASS'), ('Stratification check', 'PASS')]
+[2026-05-08 11:51:33]  [INFO   ]  
+======================================================================
+  SECTION I – SPLIT STATISTICS
+======================================================================
+[2026-05-08 11:51:33]  [INFO   ]  Split statistics saved (42 rows) -> D:\hospital_readmission_project\hospital_readmission_project\reports\split_statistics.csv
+[2026-05-08 11:51:33]  [INFO   ]  
+======================================================================
+  SECTION J – FINAL REPORT
+======================================================================
+[2026-05-08 11:51:33]  [INFO   ]  Final report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\data_splitting_report.txt
+[2026-05-08 11:51:33]  [INFO   ]  Data splitting complete: 2026-05-08 11:51:33
+[2026-05-08 12:52:29]  [INFO   ]  Data splitting started: 2026-05-08 12:52:29
+[2026-05-08 12:52:30]  [INFO   ]  Loaded featured_data: (101766, 96)
+[2026-05-08 12:52:31]  [INFO   ]  After encode: (101766, 90)
+[2026-05-08 12:52:31]  [INFO   ]  Train (71236, 89) | Val (15265, 89) | Test (15265, 89)
+[2026-05-08 12:52:31]  [INFO   ]  
+======================================================================
+  SECTION D – VISUALIZATIONS
+======================================================================
+[2026-05-08 12:52:31]  [INFO   ]  Split visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\data_splits_visualization.png
+[2026-05-08 12:52:31]  [INFO   ]  Split summary:
+        split  n_samples  pct_total  n_readmitted  n_not_readmitted  readmission_rate
+0       Train      71236       70.0          7950             63286             11.16
+1  Validation      15265       15.0          1704             13561             11.16
+2        Test      15265       15.0          1703             13562             11.16
+[2026-05-08 12:52:31]  [INFO   ]  
+======================================================================
+  SECTION E – FEATURE TYPES
+======================================================================
+[2026-05-08 12:52:31]  [INFO   ]  Numerical (14): ['time_in_hospital', 'num_lab_procedures', 'num_medications', 'total_medications', 'procedure_to_stay_ratio', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'age_length_stay', 'procedures_medications', 'comorbidity_age']
+[2026-05-08 12:52:31]  [INFO   ]  Categorical (75): ['race', 'gender', 'age', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'num_procedures', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'acetohexamide', 'glipizide', 'glyburide', 'tolbutamide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone', 'tolazamide', 'examide', 'citoglipton', 'insulin', 'glyburide-metformin', 'glipizide-metformin', 'glimepiride-pioglitazone', 'metformin-rosiglitazone', 'metformin-pioglitazone', 'change', 'diabetesMed', 'total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'hospital_stay_category', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_midpoint', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'diabetes_medication_combo', 'emergency_elderly']
+[2026-05-08 12:52:31]  [INFO   ]  
+======================================================================
+  SECTION F – SCALING
+======================================================================
+[2026-05-08 12:52:31]  [INFO   ]  Scaler fit on 14 numerical features, saved -> D:\hospital_readmission_project\hospital_readmission_project\models\scaler.pkl
+[2026-05-08 12:52:31]  [INFO   ]  Mean after scaling (sample): {'time_in_hospital': 0.0, 'num_lab_procedures': -0.0, 'num_medications': -0.0, 'total_medications': -0.0, 'procedure_to_stay_ratio': 0.0}
+[2026-05-08 12:52:31]  [INFO   ]  
+======================================================================
+  SECTION G – SAVE SPLITS
+======================================================================
+[2026-05-08 12:52:33]  [INFO   ]  Saved X_train -> CSV + PKL
+[2026-05-08 12:52:33]  [INFO   ]  Saved y_train -> CSV + PKL
+[2026-05-08 12:52:34]  [INFO   ]  Saved X_val -> CSV + PKL
+[2026-05-08 12:52:34]  [INFO   ]  Saved y_val -> CSV + PKL
+[2026-05-08 12:52:34]  [INFO   ]  Saved X_test -> CSV + PKL
+[2026-05-08 12:52:34]  [INFO   ]  Saved y_test -> CSV + PKL
+[2026-05-08 12:52:34]  [INFO   ]  
+======================================================================
+  SECTION H – LEAKAGE CHECK
+======================================================================
+[2026-05-08 12:52:34]  [INFO   ]  No index overlap between splits: PASS (train-val=0, train-test=0, val-test=0)
+[2026-05-08 12:52:34]  [INFO   ]  Scaler fitted on training data only (14 features): PASS
+[2026-05-08 12:52:34]  [INFO   ]  Stratification maintained (pos rates: train=0.1116, val=0.1116, test=0.1116): PASS
+[2026-05-08 12:52:34]  [INFO   ]  Leakage check complete: [('Index overlap check', 'PASS'), ('Scaler fit on train only', 'PASS'), ('Stratification check', 'PASS')]
+[2026-05-08 12:52:34]  [INFO   ]  
+======================================================================
+  SECTION I – SPLIT STATISTICS
+======================================================================
+[2026-05-08 12:52:34]  [INFO   ]  Split statistics saved (42 rows) -> D:\hospital_readmission_project\hospital_readmission_project\reports\split_statistics.csv
+[2026-05-08 12:52:34]  [INFO   ]  
+======================================================================
+  SECTION J – FINAL REPORT
+======================================================================
+[2026-05-08 12:52:34]  [INFO   ]  Final report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\data_splitting_report.txt
+[2026-05-08 12:52:34]  [INFO   ]  Data splitting complete: 2026-05-08 12:52:34
+[2026-05-08 12:56:41]  [INFO   ]  Data splitting started: 2026-05-08 12:56:41
+[2026-05-08 12:56:42]  [INFO   ]  Loaded featured_data: (101766, 96)
+[2026-05-08 12:56:42]  [INFO   ]  After encode: (101766, 90)
+[2026-05-08 12:56:42]  [INFO   ]  Train (71236, 89) | Val (15265, 89) | Test (15265, 89)
+[2026-05-08 12:56:42]  [INFO   ]  
+======================================================================
+  SECTION D – VISUALIZATIONS
+======================================================================
+[2026-05-08 12:56:43]  [INFO   ]  Split visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\data_splits_visualization.png
+[2026-05-08 12:56:43]  [INFO   ]  Split summary:
+        split  n_samples  pct_total  n_readmitted  n_not_readmitted  readmission_rate
+0       Train      71236       70.0          7950             63286             11.16
+1  Validation      15265       15.0          1704             13561             11.16
+2        Test      15265       15.0          1703             13562             11.16
+[2026-05-08 12:56:43]  [INFO   ]  
+======================================================================
+  SECTION E – FEATURE TYPES
+======================================================================
+[2026-05-08 12:56:43]  [INFO   ]  Numerical (14): ['time_in_hospital', 'num_lab_procedures', 'num_medications', 'total_medications', 'procedure_to_stay_ratio', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'age_length_stay', 'procedures_medications', 'comorbidity_age']
+[2026-05-08 12:56:43]  [INFO   ]  Categorical (75): ['race', 'gender', 'age', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'num_procedures', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'acetohexamide', 'glipizide', 'glyburide', 'tolbutamide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone', 'tolazamide', 'examide', 'citoglipton', 'insulin', 'glyburide-metformin', 'glipizide-metformin', 'glimepiride-pioglitazone', 'metformin-rosiglitazone', 'metformin-pioglitazone', 'change', 'diabetesMed', 'total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'hospital_stay_category', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_midpoint', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'diabetes_medication_combo', 'emergency_elderly']
+[2026-05-08 12:56:43]  [INFO   ]  
+======================================================================
+  SECTION F – SCALING
+======================================================================
+[2026-05-08 12:56:43]  [INFO   ]  Scaler fit on 14 numerical features, saved -> D:\hospital_readmission_project\hospital_readmission_project\models\scaler.pkl
+[2026-05-08 12:56:43]  [INFO   ]  Mean after scaling (sample): {'time_in_hospital': 0.0, 'num_lab_procedures': -0.0, 'num_medications': -0.0, 'total_medications': -0.0, 'procedure_to_stay_ratio': 0.0}
+[2026-05-08 12:56:43]  [INFO   ]  
+======================================================================
+  SECTION G – SAVE SPLITS
+======================================================================
+[2026-05-08 12:56:45]  [INFO   ]  Saved X_train -> CSV + PKL
+[2026-05-08 12:56:45]  [INFO   ]  Saved y_train -> CSV + PKL
+[2026-05-08 12:56:45]  [INFO   ]  Saved X_val -> CSV + PKL
+[2026-05-08 12:56:45]  [INFO   ]  Saved y_val -> CSV + PKL
+[2026-05-08 12:56:45]  [INFO   ]  Saved X_test -> CSV + PKL
+[2026-05-08 12:56:45]  [INFO   ]  Saved y_test -> CSV + PKL
+[2026-05-08 12:56:45]  [INFO   ]  
+======================================================================
+  SECTION H – LEAKAGE CHECK
+======================================================================
+[2026-05-08 12:56:45]  [INFO   ]  No index overlap between splits: PASS (train-val=0, train-test=0, val-test=0)
+[2026-05-08 12:56:46]  [INFO   ]  Scaler fitted on training data only (14 features): PASS
+[2026-05-08 12:56:46]  [INFO   ]  Stratification maintained (pos rates: train=0.1116, val=0.1116, test=0.1116): PASS
+[2026-05-08 12:56:46]  [INFO   ]  Leakage check complete: [('Index overlap check', 'PASS'), ('Scaler fit on train only', 'PASS'), ('Stratification check', 'PASS')]
+[2026-05-08 12:56:46]  [INFO   ]  
+======================================================================
+  SECTION I – SPLIT STATISTICS
+======================================================================
+[2026-05-08 12:56:46]  [INFO   ]  Split statistics saved (42 rows) -> D:\hospital_readmission_project\hospital_readmission_project\reports\split_statistics.csv
+[2026-05-08 12:56:46]  [INFO   ]  
+======================================================================
+  SECTION J – FINAL REPORT
+======================================================================
+[2026-05-08 12:56:46]  [INFO   ]  Final report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\data_splitting_report.txt
+[2026-05-08 12:56:46]  [INFO   ]  Data splitting complete: 2026-05-08 12:56:46
+[2026-08-15 19:53:16]  [INFO   ]  Data splitting started: 2026-08-15 19:53:16
+[2026-08-15 19:53:17]  [INFO   ]  Loaded featured_data: (101766, 96)
+[2026-08-15 19:53:18]  [INFO   ]  After encode: (101766, 90)
+[2026-08-15 19:53:18]  [INFO   ]  Train (71236, 89) | Val (15265, 89) | Test (15265, 89)
+[2026-08-15 19:53:18]  [INFO   ]  
+======================================================================
+  SECTION D – VISUALIZATIONS
+======================================================================
+[2026-08-15 19:53:18]  [INFO   ]  Split visualization saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\data_splits_visualization.png
+[2026-08-15 19:53:18]  [INFO   ]  Split summary:
+        split  n_samples  pct_total  n_readmitted  n_not_readmitted  readmission_rate
+0       Train      71236       70.0          7950             63286             11.16
+1  Validation      15265       15.0          1704             13561             11.16
+2        Test      15265       15.0          1703             13562             11.16
+[2026-08-15 19:53:18]  [INFO   ]  
+======================================================================
+  SECTION E – FEATURE TYPES
+======================================================================
+[2026-08-15 19:53:18]  [INFO   ]  Numerical (14): ['time_in_hospital', 'num_lab_procedures', 'num_medications', 'total_medications', 'procedure_to_stay_ratio', 'length_of_stay_squared', 'length_of_stay_log', 'average_daily_procedures', 'age_medication_interaction', 'age_comorbidity_interaction', 'lab_test_frequency', 'age_length_stay', 'procedures_medications', 'comorbidity_age']
+[2026-08-15 19:53:18]  [INFO   ]  Categorical (75): ['race', 'gender', 'age', 'admission_type_id', 'discharge_disposition_id', 'admission_source_id', 'num_procedures', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses', 'max_glu_serum', 'A1Cresult', 'metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'acetohexamide', 'glipizide', 'glyburide', 'tolbutamide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone', 'tolazamide', 'examide', 'citoglipton', 'insulin', 'glyburide-metformin', 'glipizide-metformin', 'glimepiride-pioglitazone', 'metformin-rosiglitazone', 'metformin-pioglitazone', 'change', 'diabetesMed', 'total_diagnoses_count', 'has_primary_diagnosis', 'diagnosis_diversity', 'chronic_diagnosis_flag', 'has_diabetes', 'has_heart_disease', 'has_respiratory_disease', 'has_kidney_disease', 'chronic_disease_count', 'comorbidity_index', 'medication_complexity_score', 'insulin_usage', 'diabetic_med_flag', 'medication_change_flag', 'total_procedures', 'procedure_complexity_score', 'has_surgery', 'hospital_stay_category', 'time_in_hospital_category', 'readmission_history_flag', 'emergency_admission_flag', 'admission_type_risk_score', 'admission_source_risk', 'days_since_last_admission', 'age_midpoint', 'age_risk_group', 'elderly_flag', 'very_elderly_flag', 'glucose_level_category', 'A1C_result_category', 'abnormal_lab_count', 'discharge_to_home_flag', 'discharge_with_services_flag', 'ama_discharge_flag', 'discharge_disposition_risk', 'diabetes_medication_combo', 'emergency_elderly']
+[2026-08-15 19:53:18]  [INFO   ]  
+======================================================================
+  SECTION F – SCALING
+======================================================================
+[2026-08-15 19:53:19]  [INFO   ]  Scaler fit on 14 numerical features, saved -> D:\hospital_readmission_project\hospital_readmission_project\models\scaler.pkl
+[2026-08-15 19:53:19]  [INFO   ]  Mean after scaling (sample): {'time_in_hospital': 0.0, 'num_lab_procedures': -0.0, 'num_medications': -0.0, 'total_medications': -0.0, 'procedure_to_stay_ratio': 0.0}
+[2026-08-15 19:53:19]  [INFO   ]  
+======================================================================
+  SECTION G – SAVE SPLITS
+======================================================================
+[2026-08-15 19:53:20]  [INFO   ]  Saved X_train -> CSV + PKL
+[2026-08-15 19:53:20]  [INFO   ]  Saved y_train -> CSV + PKL
+[2026-08-15 19:53:21]  [INFO   ]  Saved X_val -> CSV + PKL
+[2026-08-15 19:53:21]  [INFO   ]  Saved y_val -> CSV + PKL
+[2026-08-15 19:53:21]  [INFO   ]  Saved X_test -> CSV + PKL
+[2026-08-15 19:53:21]  [INFO   ]  Saved y_test -> CSV + PKL
+[2026-08-15 19:53:21]  [INFO   ]  
+======================================================================
+  SECTION H – LEAKAGE CHECK
+======================================================================
+[2026-08-15 19:53:21]  [INFO   ]  No index overlap between splits: PASS (train-val=0, train-test=0, val-test=0)
+[2026-08-15 19:53:21]  [INFO   ]  Scaler fitted on training data only (14 features): PASS
+[2026-08-15 19:53:21]  [INFO   ]  Stratification maintained (pos rates: train=0.1116, val=0.1116, test=0.1116): PASS
+[2026-08-15 19:53:21]  [INFO   ]  Leakage check complete: [('Index overlap check', 'PASS'), ('Scaler fit on train only', 'PASS'), ('Stratification check', 'PASS')]
+[2026-08-15 19:53:21]  [INFO   ]  
+======================================================================
+  SECTION I – SPLIT STATISTICS
+======================================================================
+[2026-08-15 19:53:22]  [INFO   ]  Split statistics saved (42 rows) -> D:\hospital_readmission_project\hospital_readmission_project\reports\split_statistics.csv
+[2026-08-15 19:53:22]  [INFO   ]  
+======================================================================
+  SECTION J – FINAL REPORT
+======================================================================
+[2026-08-15 19:53:22]  [INFO   ]  Final report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\data_splitting_report.txt
+[2026-08-15 19:53:22]  [INFO   ]  Data splitting complete: 2026-08-15 19:53:22

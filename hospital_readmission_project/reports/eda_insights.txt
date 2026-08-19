@@ -1,0 +1,28 @@
+=================================================================
+  HOSPITAL READMISSION EDA — KEY INSIGHTS
+  Generated: 2026-08-15 19:52:15
+=================================================================
+
+CLASS IMBALANCE
+  Imbalance ratio        : 4.83x
+  Class distribution     : {'NO': np.int64(54864), '>30': np.int64(35545), '<30': np.int64(11357)}
+  Recommendation         : Use SMOTE or class_weight='balanced'
+
+TOP CORRELATED FEATURES
+  Top 3 features         : number_inpatient, number_emergency, number_diagnoses
+
+HOSPITAL STAY PATTERNS
+  Avg stay (  <30)     : 4.77 days
+  Avg stay (  >30)     : 4.50 days
+  Avg stay (   NO)     : 4.25 days
+
+COMORBIDITY INSIGHTS
+  higher number_diagnoses correlates with readmission risk.
+
+RECOMMENDATIONS
+  1. Address class imbalance before modelling.
+  2. Feature-engineer diagnosis codes into ICD categories.
+  3. Consider dimensionality reduction (PCA/UMAP) on OHE columns.
+  4. Include interaction terms for top correlated features.
+
+=================================================================

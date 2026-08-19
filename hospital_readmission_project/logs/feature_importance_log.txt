@@ -1,0 +1,69 @@
+[2026-05-08 12:38:19]  [INFO   ]  Feature importance started: 2026-05-08 12:38:19
+[2026-05-08 12:38:19]  [INFO   ]  
+======================================================================
+  LOAD DATA & MODEL
+======================================================================
+[2026-05-08 12:38:19]  [INFO   ]  Loaded model: Random Forest | X_test (15265, 89)
+[2026-05-08 12:38:19]  [INFO   ]  
+======================================================================
+  BUILT-IN FEATURE IMPORTANCE
+======================================================================
+[2026-05-08 12:38:19]  [INFO   ]  Feature importance CSV saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\feature_importance.csv
+[2026-05-08 12:38:19]  [INFO   ]  Top-15 Gini chart saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\top15_gini_importance.png
+[2026-05-08 12:38:19]  [INFO   ]  
+======================================================================
+  PERMUTATION IMPORTANCE
+======================================================================
+[2026-05-08 12:38:28]  [INFO   ]  Permutation importance chart saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\permutation_importance.png
+[2026-05-08 12:38:28]  [INFO   ]  
+======================================================================
+  PARTIAL DEPENDENCE PLOTS
+======================================================================
+[2026-05-08 12:38:30]  [INFO   ]  Partial dependence plots saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\partial_dependence_plots.png
+[2026-05-08 12:38:30]  [INFO   ]  Feature importance complete: 2026-05-08 12:38:30
+[2026-05-08 12:52:47]  [INFO   ]  Feature importance started: 2026-05-08 12:52:47
+[2026-05-08 12:52:47]  [INFO   ]  
+======================================================================
+  LOAD DATA & MODEL
+======================================================================
+[2026-05-08 12:52:47]  [INFO   ]  Loaded model: Random Forest | X_test (15265, 89)
+[2026-05-08 12:52:47]  [INFO   ]  
+======================================================================
+  BUILT-IN FEATURE IMPORTANCE
+======================================================================
+[2026-05-08 12:52:47]  [INFO   ]  Feature importance CSV saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\feature_importance.csv
+[2026-05-08 12:52:47]  [INFO   ]  Top-15 Gini chart saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\top15_gini_importance.png
+[2026-05-08 12:52:47]  [INFO   ]  
+======================================================================
+  PERMUTATION IMPORTANCE
+======================================================================
+[2026-05-08 12:52:55]  [INFO   ]  Permutation importance chart saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\permutation_importance.png
+[2026-05-08 12:52:55]  [INFO   ]  
+======================================================================
+  PARTIAL DEPENDENCE PLOTS
+======================================================================
+[2026-05-08 12:52:58]  [INFO   ]  Partial dependence plots saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\partial_dependence_plots.png
+[2026-05-08 12:52:58]  [INFO   ]  Feature importance complete: 2026-05-08 12:52:58
+[2026-05-08 12:58:14]  [INFO   ]  Feature importance started: 2026-05-08 12:58:14
+[2026-05-08 12:58:14]  [INFO   ]  
+======================================================================
+  LOAD DATA & MODEL
+======================================================================
+[2026-05-08 12:58:15]  [INFO   ]  Loaded model: Random Forest | X_test (15265, 89)
+[2026-05-08 12:58:15]  [INFO   ]  
+======================================================================
+  BUILT-IN FEATURE IMPORTANCE
+======================================================================
+[2026-05-08 12:58:15]  [INFO   ]  Feature importance CSV saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\feature_importance.csv
+[2026-05-08 12:58:15]  [INFO   ]  Top-15 Gini chart saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\top15_gini_importance.png
+[2026-05-08 12:58:15]  [INFO   ]  
+======================================================================
+  PERMUTATION IMPORTANCE
+======================================================================
+[2026-05-08 12:58:23]  [INFO   ]  Permutation importance chart saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\permutation_importance.png
+[2026-05-08 12:58:23]  [INFO   ]  
+======================================================================
+  PARTIAL DEPENDENCE PLOTS
+======================================================================
+[2026-05-08 12:58:25]  [INFO   ]  Partial dependence plots saved -> D:\hospital_readmission_project\hospital_readmission_project\visualizations\feature_importance\partial_dependence_plots.png
+[2026-05-08 12:58:25]  [INFO   ]  Feature importance complete: 2026-05-08 12:58:25

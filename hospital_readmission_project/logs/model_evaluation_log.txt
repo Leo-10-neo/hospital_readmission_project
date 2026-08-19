@@ -1,0 +1,91 @@
+[2026-05-08 12:07:27]  [INFO   ]  Model evaluation started: 2026-05-08 12:07:27
+[2026-05-08 12:07:27]  [INFO   ]  
+======================================================================
+  LOAD TEST DATA
+======================================================================
+[2026-05-08 12:07:27]  [INFO   ]  X_test (15265, 89) | y_test (15265,) | pos_rate=0.1116
+[2026-05-08 12:07:27]  [INFO   ]  
+======================================================================
+  LOAD MODELS
+======================================================================
+[2026-05-08 12:07:27]  [INFO   ]  Loaded model: Gradient Boosting from gradient_boosting.pkl
+[2026-05-08 12:07:27]  [INFO   ]  Loaded model: Logistic Regression from logistic_regression.pkl
+[2026-05-08 12:07:27]  [INFO   ]  Loaded model: Random Forest from random_forest.pkl
+[2026-05-08 12:07:27]  [INFO   ]  
+======================================================================
+  MODEL EVALUATION
+======================================================================
+[2026-05-08 12:07:28]  [INFO   ]  Gradient Boosting: acc=0.8811 prec=0.2431 rec=0.0311 f1=0.0552 auc=0.6456 brier=0.1007 r2=-0.0160
+[2026-05-08 12:07:28]  [INFO   ]  Logistic Regression: acc=0.8878 prec=0.3448 rec=0.0059 f1=0.0115 auc=0.6441 brier=0.0968 r2=0.0238
+[2026-05-08 12:07:28]  [INFO   ]  Random Forest: acc=0.8651 prec=0.2327 rec=0.0910 f1=0.1309 auc=0.6519 brier=0.1473 r2=-0.4857
+[2026-05-08 12:07:28]  [INFO   ]  Confusion matrices saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_confusion_matrices.png
+[2026-05-08 12:07:29]  [INFO   ]  ROC curves saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_roc_curves.png
+[2026-05-08 12:07:29]  [INFO   ]  Metric comparison saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_metric_comparison.png
+[2026-05-08 12:07:29]  [INFO   ]  Comparison table saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\model_evaluation_results.csv
+[2026-05-08 12:07:29]  [INFO   ]  Best by AUC: Random Forest | Best by Acc: Logistic Regression | Overall best: Random Forest
+[2026-05-08 12:07:29]  [INFO   ]  Evaluation report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\model_evaluation_report.txt
+[2026-05-08 12:07:29]  [INFO   ]  Model evaluation complete: 2026-05-08 12:07:29
+[2026-05-08 12:52:43]  [INFO   ]  Model evaluation started: 2026-05-08 12:52:43
+[2026-05-08 12:52:43]  [INFO   ]  
+======================================================================
+  LOAD TEST DATA
+======================================================================
+[2026-05-08 12:52:43]  [INFO   ]  X_test (15265, 89) | y_test (15265,) | pos_rate=0.1116
+[2026-05-08 12:52:43]  [INFO   ]  
+======================================================================
+  LOAD MODELS
+======================================================================
+[2026-05-08 12:52:43]  [INFO   ]  Loaded model: Gradient Boosting from gradient_boosting.pkl
+[2026-05-08 12:52:43]  [INFO   ]  Loaded model: Logistic Regression from logistic_regression.pkl
+[2026-05-08 12:52:43]  [INFO   ]  Loaded model: Random Forest from random_forest.pkl
+[2026-05-08 12:52:43]  [INFO   ]  
+======================================================================
+  MODEL EVALUATION
+======================================================================
+[2026-05-08 12:52:43]  [INFO   ]  Gradient Boosting: acc=0.8811 prec=0.2431 rec=0.0311 f1=0.0552 auc=0.6456 brier=0.1007 r2=-0.0160
+[2026-05-08 12:52:43]  [INFO   ]  Logistic Regression: acc=0.8878 prec=0.3448 rec=0.0059 f1=0.0115 auc=0.6441 brier=0.0968 r2=0.0238
+[2026-05-08 12:52:43]  [INFO   ]  Random Forest: acc=0.8651 prec=0.2327 rec=0.0910 f1=0.1309 auc=0.6519 brier=0.1473 r2=-0.4857
+[2026-05-08 12:52:44]  [INFO   ]  Confusion matrices saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_confusion_matrices.png
+[2026-05-08 12:52:44]  [INFO   ]  ROC curves saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_roc_curves.png
+[2026-05-08 12:52:44]  [INFO   ]  Metric comparison saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_metric_comparison.png
+[2026-05-08 12:52:44]  [INFO   ]  Comparison table saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\model_evaluation_results.csv
+[2026-05-08 12:52:44]  [INFO   ]  Best by AUC: Random Forest | Best by Acc: Logistic Regression | Overall best: Random Forest
+[2026-05-08 12:52:44]  [INFO   ]  Evaluation report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\model_evaluation_report.txt
+[2026-05-08 12:52:44]  [INFO   ]  Model evaluation complete: 2026-05-08 12:52:44
+[2026-05-08 12:57:06]  [INFO   ]  Model evaluation started: 2026-05-08 12:57:06
+[2026-05-08 12:57:06]  [INFO   ]  
+======================================================================
+  LOAD TEST DATA
+======================================================================
+[2026-05-08 12:57:06]  [INFO   ]  X_test (15265, 89) | y_test (15265,) | pos_rate=0.1116
+[2026-05-08 12:57:06]  [INFO   ]  
+======================================================================
+  LOAD MODELS
+======================================================================
+[2026-05-08 12:57:06]  [INFO   ]  Loaded model: Gradient Boosting from gradient_boosting.pkl
+[2026-05-08 12:57:06]  [INFO   ]  Loaded model: Logistic Regression from logistic_regression.pkl
+[2026-05-08 12:57:06]  [INFO   ]  Loaded model: Random Forest from random_forest.pkl
+[2026-05-08 12:57:06]  [INFO   ]  
+======================================================================
+  MODEL EVALUATION
+======================================================================
+[2026-05-08 12:57:06]  [INFO   ]  Gradient Boosting: acc=0.8811 prec=0.2431 rec=0.0311 f1=0.0552 auc=0.6456 brier=0.1007 r2=-0.0160
+[2026-05-08 12:57:06]  [INFO   ]  Logistic Regression: acc=0.8878 prec=0.3448 rec=0.0059 f1=0.0115 auc=0.6441 brier=0.0968 r2=0.0238
+[2026-05-08 12:57:06]  [INFO   ]  Random Forest: acc=0.8651 prec=0.2327 rec=0.0910 f1=0.1309 auc=0.6519 brier=0.1473 r2=-0.4857
+[2026-05-08 12:57:07]  [INFO   ]  Confusion matrices saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_confusion_matrices.png
+[2026-05-08 12:57:07]  [INFO   ]  ROC curves saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_roc_curves.png
+[2026-05-08 12:57:07]  [INFO   ]  Metric comparison saved -> D:\hospital_readmission_project\hospital_readmission_project\data\visualizations\model_plots\eval_metric_comparison.png
+[2026-05-08 12:57:07]  [INFO   ]  Comparison table saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\model_evaluation_results.csv
+[2026-05-08 12:57:07]  [INFO   ]  Best by AUC: Random Forest | Best by Acc: Logistic Regression | Overall best: Random Forest
+[2026-05-08 12:57:07]  [INFO   ]  Evaluation report saved -> D:\hospital_readmission_project\hospital_readmission_project\reports\model_evaluation_report.txt
+[2026-05-08 12:57:07]  [INFO   ]  Model evaluation complete: 2026-05-08 12:57:07
+[2026-08-15 19:53:34]  [INFO   ]  Model evaluation started: 2026-08-15 19:53:34
+[2026-08-15 19:53:34]  [INFO   ]  
+======================================================================
+  LOAD TEST DATA
+======================================================================
+[2026-08-15 19:53:34]  [INFO   ]  X_test (15265, 89) | y_test (15265,) | pos_rate=0.1116
+[2026-08-15 19:53:34]  [INFO   ]  
+======================================================================
+  LOAD MODELS
+======================================================================

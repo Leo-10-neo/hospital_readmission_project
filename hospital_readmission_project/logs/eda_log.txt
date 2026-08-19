@@ -1,0 +1,376 @@
+[2026-05-08 11:30:08]  [INFO   ]  =================================================================
+[2026-05-08 11:30:08]  [INFO   ]  EDA Pipeline started: 2026-05-08 11:30:08
+[2026-05-08 11:30:09]  [INFO   ]  Raw (pre-enc) loaded: (101766, 48)
+[2026-05-08 11:30:09]  [INFO   ]  
+======================================================================
+  SECTION A — TARGET VARIABLE
+======================================================================
+[2026-05-08 11:30:09]  [INFO   ]  Class distribution:
+            count  count
+readmitted              
+NO          54864  53.91
+>30         35545  34.93
+<30         11357  11.16
+[2026-05-08 11:30:09]  [INFO   ]  Imbalance ratio: 4.83
+[2026-05-08 11:30:09]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\target_distribution.png
+[2026-05-08 11:30:09]  [INFO   ]  
+======================================================================
+  SECTION B — DEMOGRAPHICS
+======================================================================
+[2026-05-08 11:30:10]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\age_analysis.png
+[2026-05-08 11:31:23]  [INFO   ]  =================================================================
+[2026-05-08 11:31:23]  [INFO   ]  EDA Pipeline started: 2026-05-08 11:31:23
+[2026-05-08 11:31:24]  [INFO   ]  Raw (pre-enc) loaded: (101766, 48)
+[2026-05-08 11:31:24]  [INFO   ]  
+======================================================================
+  SECTION A — TARGET VARIABLE
+======================================================================
+[2026-05-08 11:31:24]  [INFO   ]  Class distribution:
+            count  count
+readmitted              
+NO          54864  53.91
+>30         35545  34.93
+<30         11357  11.16
+[2026-05-08 11:31:24]  [INFO   ]  Imbalance ratio: 4.83
+[2026-05-08 11:31:24]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\target_distribution.png
+[2026-05-08 11:31:24]  [INFO   ]  
+======================================================================
+  SECTION B — DEMOGRAPHICS
+======================================================================
+[2026-05-08 11:31:25]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\age_analysis.png
+[2026-05-08 11:31:25]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\gender_analysis.png
+[2026-05-08 11:31:26]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\race_analysis.png
+[2026-05-08 11:31:26]  [INFO   ]  
+======================================================================
+  SECTION C — CLINICAL FEATURES
+======================================================================
+[2026-05-08 11:31:26]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_1_analysis.png
+[2026-05-08 11:31:26]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_2_analysis.png
+[2026-05-08 11:31:27]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_3_analysis.png
+[2026-05-08 11:31:27]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\number_diagnoses.png
+[2026-05-08 11:31:28]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\medications_analysis.png
+[2026-05-08 11:31:28]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\procedures_analysis.png
+[2026-05-08 11:31:28]  [INFO   ]  
+======================================================================
+  SECTION D — HOSPITAL STAY
+======================================================================
+[2026-05-08 11:31:28]  [INFO   ]  Length of stay stats:
+            mean  median   std
+readmitted                    
+<30         4.77     4.0  3.03
+>30         4.50     4.0  2.99
+NO          4.25     3.0  2.96
+[2026-05-08 11:31:29]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\hospital_stay\hospital_stay_analysis.png
+[2026-05-08 11:31:29]  [INFO   ]  
+======================================================================
+  SECTION E — COMORBIDITIES
+======================================================================
+[2026-05-08 11:31:29]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_analysis.png
+[2026-05-08 11:31:30]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_heatmap.png
+[2026-05-08 11:31:30]  [INFO   ]  
+======================================================================
+  SECTION F — CORRELATION
+======================================================================
+[2026-05-08 11:31:30]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\correlation_heatmap.png
+[2026-05-08 11:31:30]  [INFO   ]  Feature-target correlations:
+number_inpatient     -0.239613
+number_emergency     -0.128985
+number_diagnoses     -0.105347
+number_outpatient    -0.081144
+time_in_hospital     -0.057718
+num_medications      -0.055378
+num_lab_procedures   -0.038513
+num_procedures        0.038235
+[2026-05-08 11:31:31]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\feature_target_correlation.png
+[2026-05-08 11:31:31]  [INFO   ]  
+======================================================================
+  SECTION G — STATISTICAL TABLES
+======================================================================
+[2026-05-08 11:31:31]  [INFO   ]  Statistical summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_statistical_summary.csv
+[2026-05-08 11:31:31]  [INFO   ]  Top 10 risk factors:
+number_inpatient      0.239613
+number_emergency      0.128985
+number_diagnoses      0.105347
+number_outpatient     0.081144
+time_in_hospital      0.057718
+num_medications       0.055378
+num_lab_procedures    0.038513
+num_procedures        0.038235
+[2026-05-08 11:31:31]  [INFO   ]  
+======================================================================
+  SECTION H — INSIGHTS
+======================================================================
+[2026-05-08 11:31:31]  [INFO   ]  Insights saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_insights.txt
+[2026-05-08 11:31:31]  [INFO   ]  
+======================================================================
+  SECTION I — DASHBOARD
+======================================================================
+[2026-05-08 11:31:32]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\eda_summary_dashboard.png
+[2026-05-08 11:31:32]  [INFO   ]  EDA complete: 2026-05-08 11:31:32
+[2026-05-08 12:51:30]  [INFO   ]  =================================================================
+[2026-05-08 12:51:30]  [INFO   ]  EDA Pipeline started: 2026-05-08 12:51:30
+[2026-05-08 12:51:31]  [INFO   ]  Raw (pre-enc) loaded: (101766, 48)
+[2026-05-08 12:51:31]  [INFO   ]  
+======================================================================
+  SECTION A — TARGET VARIABLE
+======================================================================
+[2026-05-08 12:51:31]  [INFO   ]  Class distribution:
+            count  count
+readmitted              
+NO          54864  53.91
+>30         35545  34.93
+<30         11357  11.16
+[2026-05-08 12:51:31]  [INFO   ]  Imbalance ratio: 4.83
+[2026-05-08 12:51:31]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\target_distribution.png
+[2026-05-08 12:51:31]  [INFO   ]  
+======================================================================
+  SECTION B — DEMOGRAPHICS
+======================================================================
+[2026-05-08 12:51:32]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\age_analysis.png
+[2026-05-08 12:51:32]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\gender_analysis.png
+[2026-05-08 12:51:32]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\race_analysis.png
+[2026-05-08 12:51:32]  [INFO   ]  
+======================================================================
+  SECTION C — CLINICAL FEATURES
+======================================================================
+[2026-05-08 12:51:32]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_1_analysis.png
+[2026-05-08 12:51:33]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_2_analysis.png
+[2026-05-08 12:51:33]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_3_analysis.png
+[2026-05-08 12:51:33]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\number_diagnoses.png
+[2026-05-08 12:51:34]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\medications_analysis.png
+[2026-05-08 12:51:34]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\procedures_analysis.png
+[2026-05-08 12:51:34]  [INFO   ]  
+======================================================================
+  SECTION D — HOSPITAL STAY
+======================================================================
+[2026-05-08 12:51:34]  [INFO   ]  Length of stay stats:
+            mean  median   std
+readmitted                    
+<30         4.77     4.0  3.03
+>30         4.50     4.0  2.99
+NO          4.25     3.0  2.96
+[2026-05-08 12:51:35]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\hospital_stay\hospital_stay_analysis.png
+[2026-05-08 12:51:35]  [INFO   ]  
+======================================================================
+  SECTION E — COMORBIDITIES
+======================================================================
+[2026-05-08 12:51:35]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_analysis.png
+[2026-05-08 12:51:35]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_heatmap.png
+[2026-05-08 12:51:35]  [INFO   ]  
+======================================================================
+  SECTION F — CORRELATION
+======================================================================
+[2026-05-08 12:51:35]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\correlation_heatmap.png
+[2026-05-08 12:51:35]  [INFO   ]  Feature-target correlations:
+number_inpatient     -0.239613
+number_emergency     -0.128985
+number_diagnoses     -0.105347
+number_outpatient    -0.081144
+time_in_hospital     -0.057718
+num_medications      -0.055378
+num_lab_procedures   -0.038513
+num_procedures        0.038235
+[2026-05-08 12:51:36]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\feature_target_correlation.png
+[2026-05-08 12:51:36]  [INFO   ]  
+======================================================================
+  SECTION G — STATISTICAL TABLES
+======================================================================
+[2026-05-08 12:51:36]  [INFO   ]  Statistical summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_statistical_summary.csv
+[2026-05-08 12:51:36]  [INFO   ]  Top 10 risk factors:
+number_inpatient      0.239613
+number_emergency      0.128985
+number_diagnoses      0.105347
+number_outpatient     0.081144
+time_in_hospital      0.057718
+num_medications       0.055378
+num_lab_procedures    0.038513
+num_procedures        0.038235
+[2026-05-08 12:51:36]  [INFO   ]  
+======================================================================
+  SECTION H — INSIGHTS
+======================================================================
+[2026-05-08 12:51:36]  [INFO   ]  Insights saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_insights.txt
+[2026-05-08 12:51:36]  [INFO   ]  
+======================================================================
+  SECTION I — DASHBOARD
+======================================================================
+[2026-05-08 12:51:36]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\eda_summary_dashboard.png
+[2026-05-08 12:51:36]  [INFO   ]  EDA complete: 2026-05-08 12:51:36
+[2026-05-08 12:54:31]  [INFO   ]  =================================================================
+[2026-05-08 12:54:31]  [INFO   ]  EDA Pipeline started: 2026-05-08 12:54:31
+[2026-05-08 12:54:32]  [INFO   ]  Raw (pre-enc) loaded: (101766, 48)
+[2026-05-08 12:54:32]  [INFO   ]  
+======================================================================
+  SECTION A — TARGET VARIABLE
+======================================================================
+[2026-05-08 12:54:32]  [INFO   ]  Class distribution:
+            count  count
+readmitted              
+NO          54864  53.91
+>30         35545  34.93
+<30         11357  11.16
+[2026-05-08 12:54:32]  [INFO   ]  Imbalance ratio: 4.83
+[2026-05-08 12:54:32]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\target_distribution.png
+[2026-05-08 12:54:32]  [INFO   ]  
+======================================================================
+  SECTION B — DEMOGRAPHICS
+======================================================================
+[2026-05-08 12:54:33]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\age_analysis.png
+[2026-05-08 12:54:33]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\gender_analysis.png
+[2026-05-08 12:54:33]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\race_analysis.png
+[2026-05-08 12:54:33]  [INFO   ]  
+======================================================================
+  SECTION C — CLINICAL FEATURES
+======================================================================
+[2026-05-08 12:54:33]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_1_analysis.png
+[2026-05-08 12:54:34]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_2_analysis.png
+[2026-05-08 12:54:34]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_3_analysis.png
+[2026-05-08 12:54:34]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\number_diagnoses.png
+[2026-05-08 12:54:35]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\medications_analysis.png
+[2026-05-08 12:54:36]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\procedures_analysis.png
+[2026-05-08 12:54:36]  [INFO   ]  
+======================================================================
+  SECTION D — HOSPITAL STAY
+======================================================================
+[2026-05-08 12:54:36]  [INFO   ]  Length of stay stats:
+            mean  median   std
+readmitted                    
+<30         4.77     4.0  3.03
+>30         4.50     4.0  2.99
+NO          4.25     3.0  2.96
+[2026-05-08 12:54:36]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\hospital_stay\hospital_stay_analysis.png
+[2026-05-08 12:54:36]  [INFO   ]  
+======================================================================
+  SECTION E — COMORBIDITIES
+======================================================================
+[2026-05-08 12:54:36]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_analysis.png
+[2026-05-08 12:54:37]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_heatmap.png
+[2026-05-08 12:54:37]  [INFO   ]  
+======================================================================
+  SECTION F — CORRELATION
+======================================================================
+[2026-05-08 12:54:37]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\correlation_heatmap.png
+[2026-05-08 12:54:37]  [INFO   ]  Feature-target correlations:
+number_inpatient     -0.239613
+number_emergency     -0.128985
+number_diagnoses     -0.105347
+number_outpatient    -0.081144
+time_in_hospital     -0.057718
+num_medications      -0.055378
+num_lab_procedures   -0.038513
+num_procedures        0.038235
+[2026-05-08 12:54:37]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\feature_target_correlation.png
+[2026-05-08 12:54:37]  [INFO   ]  
+======================================================================
+  SECTION G — STATISTICAL TABLES
+======================================================================
+[2026-05-08 12:54:38]  [INFO   ]  Statistical summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_statistical_summary.csv
+[2026-05-08 12:54:38]  [INFO   ]  Top 10 risk factors:
+number_inpatient      0.239613
+number_emergency      0.128985
+number_diagnoses      0.105347
+number_outpatient     0.081144
+time_in_hospital      0.057718
+num_medications       0.055378
+num_lab_procedures    0.038513
+num_procedures        0.038235
+[2026-05-08 12:54:38]  [INFO   ]  
+======================================================================
+  SECTION H — INSIGHTS
+======================================================================
+[2026-05-08 12:54:38]  [INFO   ]  Insights saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_insights.txt
+[2026-05-08 12:54:38]  [INFO   ]  
+======================================================================
+  SECTION I — DASHBOARD
+======================================================================
+[2026-05-08 12:54:38]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\eda_summary_dashboard.png
+[2026-05-08 12:54:38]  [INFO   ]  EDA complete: 2026-05-08 12:54:38
+[2026-08-15 19:52:06]  [INFO   ]  =================================================================
+[2026-08-15 19:52:06]  [INFO   ]  EDA Pipeline started: 2026-08-15 19:52:06
+[2026-08-15 19:52:06]  [INFO   ]  Raw (pre-enc) loaded: (101766, 48)
+[2026-08-15 19:52:06]  [INFO   ]  
+======================================================================
+  SECTION A — TARGET VARIABLE
+======================================================================
+[2026-08-15 19:52:06]  [INFO   ]  Class distribution:
+            count  count
+readmitted              
+NO          54864  53.91
+>30         35545  34.93
+<30         11357  11.16
+[2026-08-15 19:52:06]  [INFO   ]  Imbalance ratio: 4.83
+[2026-08-15 19:52:07]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\target_distribution.png
+[2026-08-15 19:52:07]  [INFO   ]  
+======================================================================
+  SECTION B — DEMOGRAPHICS
+======================================================================
+[2026-08-15 19:52:08]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\age_analysis.png
+[2026-08-15 19:52:09]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\gender_analysis.png
+[2026-08-15 19:52:09]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\demographics\race_analysis.png
+[2026-08-15 19:52:09]  [INFO   ]  
+======================================================================
+  SECTION C — CLINICAL FEATURES
+======================================================================
+[2026-08-15 19:52:09]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_1_analysis.png
+[2026-08-15 19:52:10]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_2_analysis.png
+[2026-08-15 19:52:10]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\diag_3_analysis.png
+[2026-08-15 19:52:10]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\number_diagnoses.png
+[2026-08-15 19:52:11]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\medications_analysis.png
+[2026-08-15 19:52:11]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\clinical_features\procedures_analysis.png
+[2026-08-15 19:52:11]  [INFO   ]  
+======================================================================
+  SECTION D — HOSPITAL STAY
+======================================================================
+[2026-08-15 19:52:11]  [INFO   ]  Length of stay stats:
+            mean  median   std
+readmitted                    
+<30         4.77     4.0  3.03
+>30         4.50     4.0  2.99
+NO          4.25     3.0  2.96
+[2026-08-15 19:52:12]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\hospital_stay\hospital_stay_analysis.png
+[2026-08-15 19:52:12]  [INFO   ]  
+======================================================================
+  SECTION E — COMORBIDITIES
+======================================================================
+[2026-08-15 19:52:12]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_analysis.png
+[2026-08-15 19:52:13]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\comorbidities\comorbidity_heatmap.png
+[2026-08-15 19:52:13]  [INFO   ]  
+======================================================================
+  SECTION F — CORRELATION
+======================================================================
+[2026-08-15 19:52:13]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\correlation_heatmap.png
+[2026-08-15 19:52:14]  [INFO   ]  Feature-target correlations:
+number_inpatient     -0.239613
+number_emergency     -0.128985
+number_diagnoses     -0.105347
+number_outpatient    -0.081144
+time_in_hospital     -0.057718
+num_medications      -0.055378
+num_lab_procedures   -0.038513
+num_procedures        0.038235
+[2026-08-15 19:52:14]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\correlations\feature_target_correlation.png
+[2026-08-15 19:52:14]  [INFO   ]  
+======================================================================
+  SECTION G — STATISTICAL TABLES
+======================================================================
+[2026-08-15 19:52:15]  [INFO   ]  Statistical summary saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_statistical_summary.csv
+[2026-08-15 19:52:15]  [INFO   ]  Top 10 risk factors:
+number_inpatient      0.239613
+number_emergency      0.128985
+number_diagnoses      0.105347
+number_outpatient     0.081144
+time_in_hospital      0.057718
+num_medications       0.055378
+num_lab_procedures    0.038513
+num_procedures        0.038235
+[2026-08-15 19:52:15]  [INFO   ]  
+======================================================================
+  SECTION H — INSIGHTS
+======================================================================
+[2026-08-15 19:52:15]  [INFO   ]  Insights saved → D:\hospital_readmission_project\hospital_readmission_project\reports\eda_insights.txt
+[2026-08-15 19:52:15]  [INFO   ]  
+======================================================================
+  SECTION I — DASHBOARD
+======================================================================
+[2026-08-15 19:52:15]  [INFO   ]  Saved → D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\eda_summary_dashboard.png
+[2026-08-15 19:52:15]  [INFO   ]  EDA complete: 2026-08-15 19:52:15

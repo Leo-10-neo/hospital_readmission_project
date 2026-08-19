@@ -1,0 +1,49 @@
+======================================================================
+  HOSPITAL READMISSION — DATA SPLITTING REPORT
+  Generated : 2026-08-15 19:53:22
+======================================================================
+
+DATASET
+  Total samples      : 101,766
+  Total features     : 89
+  Target column      : readmitted
+
+TRAIN / VALIDATION / TEST SPLITS
+  Train      :  71,236 samples  (70.0%)
+  Validation :  15,265 samples  (15.0%)
+  Test       :  15,265 samples  (15.0%)
+
+CLASS DISTRIBUTION (readmitted = 1)
+  Train pos rate : 11.16%
+  Val   pos rate : 11.16%
+  Test  pos rate : 11.16%
+
+FEATURE IDENTIFICATION
+  Numerical features  : 14
+  Categorical features: 75
+  Feature types saved : D:\hospital_readmission_project\hospital_readmission_project\reports\feature_types.json
+
+FEATURE SCALING
+  Method  : StandardScaler (fit on train only — no leakage)
+  Applied to 14 numerical features
+  Scaler saved: D:\hospital_readmission_project\hospital_readmission_project\models\scaler.pkl
+
+DATA LEAKAGE CHECKS
+  [PASS] Index overlap check
+  [PASS] Scaler fit on train only
+  [PASS] Stratification check
+
+SAVED FILES
+  Split CSV            : D:\hospital_readmission_project\hospital_readmission_project\reports\data_split_summary.csv
+  Feature types JSON   : D:\hospital_readmission_project\hospital_readmission_project\reports\feature_types.json
+  Split statistics CSV : D:\hospital_readmission_project\hospital_readmission_project\reports\split_statistics.csv
+  Split visualization  : D:\hospital_readmission_project\hospital_readmission_project\visualizations\eda\data_splits_visualization.png
+  Scaler               : D:\hospital_readmission_project\hospital_readmission_project\models\scaler.pkl
+  Split CSVs + PKLs    : data/processed/X_train, y_train, X_val, y_val, X_test, y_test
+
+RECOMMENDATIONS FOR NEXT STEPS
+  1. Address class imbalance (~11% positive): use SMOTE or class_weight='balanced'
+  2. Run hyperparameter tuning (GridSearchCV / Optuna) on best model
+  3. Evaluate final model on test set only once (held-out evaluation)
+  4. Add SHAP explainability for clinical interpretability
+======================================================================
